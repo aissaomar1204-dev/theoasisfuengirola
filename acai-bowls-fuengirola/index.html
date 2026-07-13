@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ══ SEO: landing de categoría — keyword "açaí bowl Fuengirola" ══ -->
+  <title>Açaí Bowls en Fuengirola desde 5,50 € | The Oasis</title>
+  <meta name="description" content="Los mejores açaí bowls de Fuengirola, preparados al momento con fruta fresca y açaí premium. 4 tamaños (S–XL) desde 5,50 €. Av. Ramón y Cajal 30, junto al centro. Pide para recoger por WhatsApp." />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="ES-MA" />
+  <meta name="geo.placename" content="Fuengirola, Málaga" />
+  <meta name="theme-color" content="#FDFBF7" />
+  <link rel="canonical" href="https://theoasisfuengirola.com/acai-bowls-fuengirola/" />
+  <link rel="icon" type="image/png" href="../logo.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="The Oasis" />
+  <meta property="og:title" content="Açaí Bowls en Fuengirola desde 5,50 € | The Oasis" />
+  <meta property="og:description" content="Açaí premium, fruta fresca y granola artesanal. Preparado al momento para llevar en el centro de Fuengirola." />
+  <meta property="og:image" content="https://theoasisfuengirola.com/logo.png" />
+  <meta property="og:url" content="https://theoasisfuengirola.com/acai-bowls-fuengirola/" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Datos estructurados: negocio local + migas de pan + FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Restaurant",
+        "name": "The Oasis",
+        "image": "https://theoasisfuengirola.com/logo.png",
+        "servesCuisine": ["Açaí Bowls", "Healthy"],
+        "priceRange": "€",
+        "telephone": "+34602382912",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Avenida Ramón y Cajal, 30",
+          "addressLocality": "Fuengirola",
+          "addressRegion": "Málaga",
+          "postalCode": "29640",
+          "addressCountry": "ES"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 36.5397, "longitude": -4.6249 },
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "12:00", "closes": "23:00"
+        }],
+        "url": "https://theoasisfuengirola.com/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://theoasisfuengirola.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Açaí Bowls Fuengirola", "item": "https://theoasisfuengirola.com/acai-bowls-fuengirola/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cuánto cuesta un açaí bowl en Fuengirola?",
+            "acceptedAnswer": { "@type": "Answer", "text": "En The Oasis los açaí y fruit bowls van desde 5,50 € (tamaño S) hasta 11,50 € (tamaño XL). Todos se preparan al momento con fruta fresca y puedes añadir toppings extra por 0,90 € o proteína por 1,50 €." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿El açaí bowl es apto para veganos?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sí. La base de açaí es 100% vegetal y la mayoría de nuestros toppings también. Solo tienes que avisarnos al pedir y montamos tu bowl completamente vegano, por ejemplo con granola sin miel." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo pedir mi açaí bowl para recoger?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sí, es nuestro formato principal: pide por WhatsApp al +34 602 38 29 12 y te avisamos cuando esté listo para recoger en Avenida Ramón y Cajal 30, Fuengirola. Sin esperas." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué açaí bowl me recomendáis para después de entrenar?",
+            "acceptedAnswer": { "@type": "Answer", "text": "El Protein Power: açaí premium con proteína whey, plátano, nibs de cacao, crema de cacahuete y granola. Y si prefieres algo más ligero, el Green Recovery con espinaca, espirulina y kiwi." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            crema: '#FDFBF7', arena: '#F3EDE2', cacao: '#3E2723',
+            cacaoL: '#6D4C41', acai: '#4A154B', acaiL: '#5C2C5D', piedra: '#9B9184'
+          },
+          fontFamily: { display: ['Poppins','sans-serif'], body: ['Inter','sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease-out, transform .7s ease-out; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .btn { transition: transform .25s ease, background-color .25s ease, color .25s ease; }
+    .btn:hover { transform: translateY(-2px) scale(1.03); }
+    .btn:active { transform: scale(.97); }
+    .dots { flex: 1; margin: 0 .6rem; border-bottom: 2px dotted rgba(62,39,35,.25); transform: translateY(-4px); }
+    .size-pill {
+      display: inline-flex; align-items: baseline; gap: .35rem;
+      background: #fff; border: 1px solid rgba(62,39,35,.12); border-radius: 9999px;
+      padding: .45rem .85rem; font-size: .82rem; font-weight: 600; color: #3E2723;
+    }
+    .size-pill b { color: #4A154B; font-family: Poppins, sans-serif; }
+    .size-pill-light { background: rgba(255,255,255,.13); border-color: rgba(255,255,255,.28); color: #fff; }
+    .size-pill-light b { color: #fff; }
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] .faq-arrow { transform: rotate(180deg); }
+    .faq-arrow { transition: transform .3s ease; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+  </style>
+</head>
+
+<body class="bg-crema text-cacao font-body antialiased">
+
+  <!-- ══ NAVBAR ══ -->
+  <header class="sticky top-0 z-50 bg-crema/90 backdrop-blur-md shadow-sm">
+    <nav class="max-w-5xl mx-auto flex items-center justify-between gap-3 px-4 sm:px-6 h-[68px]" aria-label="Navegación">
+      <a href="../" class="flex items-center gap-2.5">
+        <img src="../logo.png" alt="The Oasis Fuengirola" class="h-10 w-10 rounded-full object-cover" width="40" height="40" />
+        <span class="font-display font-bold text-lg">The Oasis</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-6 font-medium text-sm">
+        <li><a href="../" class="hover:text-acai transition-colors">Inicio</a></li>
+        <li><span class="text-acai font-semibold" aria-current="page">Açaí Bowls</span></li>
+        <li><a href="../smoothies-zumos-fuengirola/" class="hover:text-acai transition-colors">Smoothies y Zumos</a></li>
+        <li><a href="../crepes-gofres-fuengirola/" class="hover:text-acai transition-colors">Crepes y Gofres</a></li>
+      </ul>
+      <a href="https://wa.me/34602382912?text=Hola%20The%20Oasis!%20Quiero%20pedir%20un%20a%C3%A7a%C3%AD%20bowl%20para%20recoger."
+         target="_blank" rel="noopener"
+         class="btn inline-flex items-center gap-2 bg-acai hover:bg-acaiL text-white font-display font-semibold text-sm px-4 sm:px-5 py-2.5 rounded-full shadow-md shadow-acai/25">
+        Pedir por WhatsApp
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ══ HERO ══ -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-10">
+      <nav aria-label="Migas de pan" class="text-xs text-piedra mb-4">
+        <a href="../" class="hover:text-acai">Inicio</a> <span aria-hidden="true">›</span> <span>Açaí Bowls Fuengirola</span>
+      </nav>
+      <h1 class="reveal visible font-display font-extrabold text-3xl sm:text-5xl leading-tight tracking-tight max-w-2xl">
+        Açaí Bowls en <span class="text-acai">Fuengirola</span>, preparados al momento
+      </h1>
+      <p class="reveal visible mt-5 text-cacaoL max-w-2xl text-base sm:text-lg">
+        En The Oasis servimos açaí premium batido al momento y coronado con fruta fresca del día,
+        granola artesanal y cremas naturales. Elige entre 4 tamaños (S, M, L y XL) desde
+        <strong>5,50 €</strong> y llévatelo listo para la playa, el gimnasio o un paseo por el centro
+        de Fuengirola. Estamos en <strong>Avenida Ramón y Cajal 30</strong>, a un paso del paseo marítimo.
+      </p>
+      <div class="reveal visible mt-7 flex flex-col sm:flex-row gap-3.5">
+        <a href="https://wa.me/34602382912?text=Hola%20The%20Oasis!%20Quiero%20pedir%20un%20a%C3%A7a%C3%AD%20bowl%20para%20recoger."
+           target="_blank" rel="noopener"
+           class="btn inline-flex items-center justify-center bg-acai hover:bg-acaiL text-white font-display font-semibold px-8 py-4 rounded-full shadow-lg shadow-acai/30 min-h-[52px]">
+          Pedir para recoger
+        </a>
+        <a href="../#menu"
+           class="btn inline-flex items-center justify-center border-2 border-cacao text-cacao hover:bg-cacao hover:text-crema font-display font-semibold px-8 py-4 rounded-full min-h-[52px]">
+          Ver carta completa
+        </a>
+      </div>
+    </section>
+
+    <!-- ══ LISTA DE BOWLS ══ -->
+    <section class="bg-arena/60 py-12 sm:py-16" aria-label="Nuestros açaí bowls">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 space-y-7">
+        <h2 class="reveal font-display font-bold text-2xl sm:text-3xl text-center mb-8">Nuestros bowls, de más ligero a más completo</h2>
+
+        <article class="reveal">
+          <div class="flex items-baseline">
+            <h3 class="font-display font-semibold text-lg">Coco Zen</h3><span class="dots"></span>
+            <span class="text-sm text-piedra font-medium whitespace-nowrap">desde 5,50 €</span>
+          </div>
+          <p class="mt-1.5 text-sm text-piedra">Yogur de coco, frutos rojos, miel de Málaga y granola artesanal</p>
+          <div class="mt-2.5 flex flex-wrap gap-2"><span class="size-pill"><b>S</b> 5,50 €</span><span class="size-pill"><b>M</b> 6,90 €</span><span class="size-pill"><b>L</b> 8,20 €</span><span class="size-pill"><b>XL</b> 9,50 €</span></div>
+        </article>
+
+        <article class="reveal">
+          <div class="flex items-baseline">
+            <h3 class="font-display font-semibold text-lg">Tropical Escape</h3><span class="dots"></span>
+            <span class="text-sm text-piedra font-medium whitespace-nowrap">desde 5,90 €</span>
+          </div>
+          <p class="mt-1.5 text-sm text-piedra">Mango, piña, maracuyá, coco rallado y granola de miel</p>
+          <div class="mt-2.5 flex flex-wrap gap-2"><span class="size-pill"><b>S</b> 5,90 €</span><span class="size-pill"><b>M</b> 7,20 €</span><span class="size-pill"><b>L</b> 8,50 €</span><span class="size-pill"><b>XL</b> 9,90 €</span></div>
+        </article>
+
+        <article class="reveal">
+          <div class="flex items-baseline">
+            <h3 class="font-display font-semibold text-lg">Green Recovery</h3><span class="dots"></span>
+            <span class="text-sm text-piedra font-medium whitespace-nowrap">desde 6,20 €</span>
+          </div>
+          <p class="mt-1.5 text-sm text-piedra">Espinaca, plátano, espirulina, kiwi, almendra laminada y granola</p>
+          <div class="mt-2.5 flex flex-wrap gap-2"><span class="size-pill"><b>S</b> 6,20 €</span><span class="size-pill"><b>M</b> 7,50 €</span><span class="size-pill"><b>L</b> 8,80 €</span><span class="size-pill"><b>XL</b> 10,20 €</span></div>
+        </article>
+
+        <article class="reveal">
+          <div class="flex items-baseline">
+            <h3 class="font-display font-semibold text-lg">Dragon Sunrise</h3><span class="dots"></span>
+            <span class="text-sm text-piedra font-medium whitespace-nowrap">desde 6,50 €</span>
+          </div>
+          <p class="mt-1.5 text-sm text-piedra">Pitaya (fruta del dragón), mango, kiwi, chía y granola crujiente</p>
+          <div class="mt-2.5 flex flex-wrap gap-2"><span class="size-pill"><b>S</b> 6,50 €</span><span class="size-pill"><b>M</b> 7,90 €</span><span class="size-pill"><b>L</b> 9,20 €</span><span class="size-pill"><b>XL</b> 10,50 €</span></div>
+        </article>
+
+        <article class="reveal relative bg-gradient-to-br from-acai to-acaiL text-white rounded-3xl p-6 sm:p-7 shadow-xl shadow-acai/20">
+          <span class="absolute -top-3 left-6 bg-crema text-acai text-xs font-bold px-3.5 py-1.5 rounded-full shadow">TOP VENTAS</span>
+          <div class="flex items-baseline">
+            <h3 class="font-display font-bold text-xl">Açaí Oasis Supreme</h3><span class="dots !border-white/30"></span>
+            <span class="text-sm text-white/70 font-medium whitespace-nowrap">desde 6,90 €</span>
+          </div>
+          <p class="mt-2 text-sm text-white/75">Açaí premium, granola artesanal, fresa, plátano, coco tostado y crema de cacahuete</p>
+          <div class="mt-3 flex flex-wrap gap-2"><span class="size-pill size-pill-light"><b>S</b> 6,90 €</span><span class="size-pill size-pill-light"><b>M</b> 8,20 €</span><span class="size-pill size-pill-light"><b>L</b> 9,50 €</span><span class="size-pill size-pill-light"><b>XL</b> 10,90 €</span></div>
+        </article>
+
+        <article class="reveal">
+          <div class="flex items-baseline">
+            <h3 class="font-display font-semibold text-lg">Protein Power</h3><span class="dots"></span>
+            <span class="text-sm text-piedra font-medium whitespace-nowrap">desde 7,50 €</span>
+          </div>
+          <p class="mt-1.5 text-sm text-piedra">Açaí, proteína whey, plátano, nibs de cacao, crema de cacahuete y granola</p>
+          <div class="mt-2.5 flex flex-wrap gap-2"><span class="size-pill"><b>S</b> 7,50 €</span><span class="size-pill"><b>M</b> 8,90 €</span><span class="size-pill"><b>L</b> 10,20 €</span><span class="size-pill"><b>XL</b> 11,50 €</span></div>
+        </article>
+
+        <p class="text-center text-xs text-piedra pt-1">Topping extra +0,90 € · Extra de proteína +1,50 €</p>
+      </div>
+    </section>
+
+    <!-- ══ CONTENIDO SEO ══ -->
+    <section class="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-10">
+      <div class="reveal">
+        <h2 class="font-display font-bold text-2xl mb-3">¿Por qué nuestros açaí bowls son diferentes?</h2>
+        <p class="text-cacaoL leading-relaxed">
+          Usamos pulpa de açaí premium sin azúcares añadidos, batida en el momento — nunca
+          descongelada de antemano — y fruta que seleccionamos cada mañana. La granola es artesanal
+          y las cremas (cacahuete, pistacho) son 100% naturales. El resultado: un bowl denso, frío y
+          cremoso como los de Brasil, en pleno centro de Fuengirola.
+        </p>
+      </div>
+      <div class="reveal">
+        <h2 class="font-display font-bold text-2xl mb-3">El plan perfecto: playa, entreno o paseo</h2>
+        <p class="text-cacaoL leading-relaxed">
+          Todos nuestros bowls se sirven para llevar en envase con tapa y cuchara, listos para
+          comerlos en el paseo marítimo de Fuengirola o después de entrenar. Si buscas recuperación
+          muscular, pide el Protein Power con whey; si quieres algo ligero y antioxidante, el Green
+          Recovery o el Coco Zen son tu opción. Abrimos de lunes a sábado de 12:00 a 23:00.
+        </p>
+      </div>
+
+      <!-- FAQ visible (coincide con el JSON-LD FAQPage) -->
+      <div class="reveal">
+        <h2 class="font-display font-bold text-2xl mb-5">Preguntas frecuentes</h2>
+        <div class="space-y-3">
+          <details class="bg-white rounded-2xl px-5 py-4 shadow-sm">
+            <summary class="flex items-center justify-between font-display font-semibold">
+              ¿Cuánto cuesta un açaí bowl en Fuengirola?
+              <svg class="faq-arrow w-4 h-4 shrink-0 ml-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 text-sm text-cacaoL">En The Oasis van desde 5,50 € (tamaño S) hasta 11,50 € (tamaño XL). Todos se preparan al momento y puedes añadir toppings por 0,90 € o proteína por 1,50 €.</p>
+          </details>
+          <details class="bg-white rounded-2xl px-5 py-4 shadow-sm">
+            <summary class="flex items-center justify-between font-display font-semibold">
+              ¿El açaí bowl es apto para veganos?
+              <svg class="faq-arrow w-4 h-4 shrink-0 ml-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 text-sm text-cacaoL">Sí. La base de açaí es 100% vegetal y la mayoría de toppings también. Avísanos al pedir y montamos tu bowl completamente vegano, por ejemplo con granola sin miel.</p>
+          </details>
+          <details class="bg-white rounded-2xl px-5 py-4 shadow-sm">
+            <summary class="flex items-center justify-between font-display font-semibold">
+              ¿Puedo pedir para recoger?
+              <svg class="faq-arrow w-4 h-4 shrink-0 ml-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 text-sm text-cacaoL">Sí, es nuestro formato principal: pide por WhatsApp al +34 602 38 29 12 y te avisamos cuando esté listo para recoger en Av. Ramón y Cajal 30. Sin esperas.</p>
+          </details>
+          <details class="bg-white rounded-2xl px-5 py-4 shadow-sm">
+            <summary class="flex items-center justify-between font-display font-semibold">
+              ¿Qué bowl me recomendáis para después de entrenar?
+              <svg class="faq-arrow w-4 h-4 shrink-0 ml-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 text-sm text-cacaoL">El Protein Power: açaí con whey, plátano, nibs de cacao, crema de cacahuete y granola. Si prefieres algo más ligero, el Green Recovery con espinaca, espirulina y kiwi.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ UBICACIÓN COMPACTA ══ -->
+    <section class="bg-cacao text-crema py-12" aria-label="Ubicación">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="font-display font-bold text-2xl mb-3">Recógelo en el centro de Fuengirola</h2>
+        <address class="not-italic text-arena/80">Avenida Ramón y Cajal, 30 · 29640 Fuengirola, Málaga<br />Lunes a Sábado · 12:00 – 23:00</address>
+        <a href="https://maps.google.com/?q=The+Oasis,+Avenida+Ram%C3%B3n+y+Cajal+30,+29640+Fuengirola" target="_blank" rel="noopener"
+           class="btn mt-6 inline-flex items-center justify-center bg-crema text-cacao hover:bg-arena font-display font-semibold px-8 py-4 rounded-full min-h-[52px]">
+          Cómo llegar
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="bg-cacao border-t border-crema/10 text-arena/70 py-8 text-sm">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col items-center gap-3">
+      <nav class="flex flex-wrap justify-center gap-x-5 gap-y-2" aria-label="Enlaces">
+        <a href="../" class="hover:text-crema transition-colors">Inicio</a>
+        <a href="../smoothies-zumos-fuengirola/" class="hover:text-crema transition-colors">Smoothies y Zumos</a>
+        <a href="../crepes-gofres-fuengirola/" class="hover:text-crema transition-colors">Crepes y Gofres</a>
+        <a href="../en/" class="hover:text-crema transition-colors">English</a>
+      </nav>
+      <p class="text-xs text-arena/40">© 2026 The Oasis Fuengirola</p>
+    </div>
+  </footer>
+
+  <script>
+    /* Fade-in al hacer scroll */
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

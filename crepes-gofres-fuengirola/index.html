@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ══ SEO: landing de categoría — keyword "crepes / gofres Fuengirola" ══ -->
+  <title>Crepes y Gofres Artesanales en Fuengirola desde 4,50 € | The Oasis</title>
+  <meta name="description" content="Crepes dulces y salados y gofres belgas artesanales en Fuengirola, desde 4,50 €. Nutella con fresa, pistacho, açaí crunch y opción fit salada. Av. Ramón y Cajal 30. Para llevar." />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="ES-MA" />
+  <meta name="geo.placename" content="Fuengirola, Málaga" />
+  <meta name="theme-color" content="#FDFBF7" />
+  <link rel="canonical" href="https://theoasisfuengirola.com/crepes-gofres-fuengirola/" />
+  <link rel="icon" type="image/png" href="../logo.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="The Oasis" />
+  <meta property="og:title" content="Crepes y Gofres Artesanales en Fuengirola | The Oasis" />
+  <meta property="og:description" content="Masa artesanal hecha cada día: crepes dulces y salados y gofres belgas para llevar en el centro de Fuengirola." />
+  <meta property="og:image" content="https://theoasisfuengirola.com/logo.png" />
+  <meta property="og:url" content="https://theoasisfuengirola.com/crepes-gofres-fuengirola/" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Datos estructurados: negocio local + migas de pan + FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Restaurant",
+        "name": "The Oasis",
+        "image": "https://theoasisfuengirola.com/logo.png",
+        "servesCuisine": ["Crepes", "Waffles", "Healthy"],
+        "priceRange": "€",
+        "telephone": "+34602382912",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Avenida Ramón y Cajal, 30",
+          "addressLocality": "Fuengirola",
+          "addressRegion": "Málaga",
+          "postalCode": "29640",
+          "addressCountry": "ES"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 36.5397, "longitude": -4.6249 },
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "12:00", "closes": "23:00"
+        }],
+        "url": "https://theoasisfuengirola.com/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://theoasisfuengirola.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Crepes y Gofres Fuengirola", "item": "https://theoasisfuengirola.com/crepes-gofres-fuengirola/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cuánto cuestan los crepes y gofres en The Oasis?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Desde 4,50 € el gofre belga clásico hasta 6,50 € el gofre Açaí Crunch. Los crepes van de 4,90 € a 5,90 €, todos con masa artesanal hecha cada día." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Tenéis crepes salados?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sí, el Crepe Salado Fit: pavo, aguacate, queso fresco y rúcula por 5,50 €. Ideal si buscas algo salado y ligero para comer o cenar en Fuengirola." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿La masa de crepes y gofres es sin gluten?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Nuestras masas se elaboran con harina de trigo, por lo que contienen gluten. Si tienes intolerancia, pregúntanos en tienda: nuestros bowls y smoothies sí son naturalmente sin gluten." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Hasta qué hora puedo pedir un crepe o gofre?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Abrimos de lunes a sábado de 12:00 a 23:00, así que también somos plan de postre o capricho nocturno. Pide por WhatsApp al +34 602 38 29 12 y recógelo sin esperar." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            crema: '#FDFBF7', arena: '#F3EDE2', cacao: '#3E2723',
+            cacaoL: '#6D4C41', acai: '#4A154B', acaiL: '#5C2C5D', piedra: '#9B9184'
+          },
+          fontFamily: { display: ['Poppins','sans-serif'], body: ['Inter','sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease-out, transform .7s ease-out; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .btn { transition: transform .25s ease, background-color .25s ease, color .25s ease; }
+    .btn:hover { transform: translateY(-2px) scale(1.03); }
+    .btn:active { transform: scale(.97); }
+    .dots { flex: 1; margin: 0 .6rem; border-bottom: 2px dotted rgba(62,39,35,.25); transform: translateY(-4px); }
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] .faq-arrow { transform: rotate(180deg); }
+    .faq-arrow { transition: transform .3s ease; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+  </style>
+</head>
+
+<body class="bg-crema text-cacao font-body antialiased">
+
+  <!-- ══ NAVBAR ══ -->
+  <header class="sticky top-0 z-50 bg-crema/90 backdrop-blur-md shadow-sm">
+    <nav class="max-w-5xl mx-auto flex items-center justify-between gap-3 px-4 sm:px-6 h-[68px]" aria-label="Navegación">
+      <a href="../" class="flex items-center gap-2.5">
+        <img src="../logo.png" alt="The Oasis Fuengirola" class="h-10 w-10 rounded-full object-cover" width="40" height="40" />
+        <span class="font-display font-bold text-lg">The Oasis</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-6 font-medium text-sm">
+        <li><a href="../" class="hover:text-acai transition-colors">Inicio</a></li>
+        <li><a href="../acai-bowls-fuengirola/" class="hover:text-acai transition-colors">Açaí Bowls</a></li>
+        <li><a href="../smoothies-zumos-fuengirola/" class="hover:text-acai transition-colors">Smoothies y Zumos</a></li>
+        <li><span class="text-acai font-semibold" aria-current="page">Crepes y Gofres</span></li>
+      </ul>
+      <a href="https://wa.me/34602382912?text=Hola%20The%20Oasis!%20Quiero%20pedir%20un%20crepe%20o%20gofre%20para%20recoger."
+         target="_blank" rel="noopener"
+         class="btn inline-flex items-center gap-2 bg-acai hover:bg-acaiL text-white font-display font-semibold text-sm px-4 sm:px-5 py-2.5 rounded-full shadow-md shadow-acai/25">
+        Pedir por WhatsApp
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ══ HERO ══ -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-10">
+      <nav aria-label="Migas de pan" class="text-xs text-piedra mb-4">
+        <a href="../" class="hover:text-acai">Inicio</a> <span aria-hidden="true">›</span> <span>Crepes y Gofres Fuengirola</span>
+      </nav>
+      <h1 class="reveal visible font-display font-extrabold text-3xl sm:text-5xl leading-tight tracking-tight max-w-2xl">
+        Crepes y gofres artesanales en <span class="text-acai">Fuengirola</span>
+      </h1>
+      <p class="reveal visible mt-5 text-cacaoL max-w-2xl text-base sm:text-lg">
+        Masa artesanal hecha cada día y plancha caliente hasta las <strong>23:00</strong>: crepes
+        dulces y salados y gofres belgas desde <strong>4,50 €</strong>. Del clásico Nutella con
+        fresa al gofre Açaí Crunch que une nuestros dos mundos. Para llevar en Avenida Ramón y
+        Cajal 30, en el centro de Fuengirola.
+      </p>
+      <div class="reveal visible mt-7 flex flex-col sm:flex-row gap-3.5">
+        <a href="https://wa.me/34602382912?text=Hola%20The%20Oasis!%20Quiero%20pedir%20un%20crepe%20o%20gofre%20para%20recoger."
+           target="_blank" rel="noopener"
+           class="btn inline-flex items-center justify-center bg-acai hover:bg-acaiL text-white font-display font-semibold px-8 py-4 rounded-full shadow-lg shadow-acai/30 min-h-[52px]">
+          Pedir para recoger
+        </a>
+        <a href="../#menu"
+           class="btn inline-flex items-center justify-center border-2 border-cacao text-cacao hover:bg-cacao hover:text-crema font-display font-semibold px-8 py-4 rounded-full min-h-[52px]">
+          Ver carta completa
+        </a>
+      </div>
+    </section>
+
+    <!-- ══ LISTA DE CREPES Y GOFRES ══ -->
+    <section class="bg-arena/60 py-12 sm:py-16" aria-label="Nuestros crepes y gofres">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 space-y-7">
+        <h2 class="reveal font-display font-bold text-2xl sm:text-3xl text-center mb-8">Los caprichos, de más barato a más caro</h2>
+
+        <article class="reveal">
+          <div class="flex items-baseline">
+            <h3 class="font-display font-semibold text-lg">Gofre Belga Clásico</h3><span class="dots"></span>
+            <span class="font-display font-bold text-lg whitespace-nowrap">4,50 €</span>
+          </div>
+          <p class="mt-1.5 text-sm text-piedra">Azúcar perlado, con sirope de arce o chocolate fundido</p>
+        </article>
+
+        <article class="reveal">
+          <div class="flex items-baseline">
+            <h3 class="font-display font-semibold text-lg">Crepe Nutella &amp; Fresa</h3><span class="dots"></span>
+            <span class="font-display font-bold text-lg whitespace-nowrap">4,90 €</span>
+          </div>
+          <p class="mt-1.5 text-sm text-piedra">El clásico irresistible con fresas frescas de temporada</p>
+        </article>
+
+        <article class="reveal">
+          <div class="flex items-baseline">
+            <h3 class="font-display font-semibold text-lg">Crepe Salado Fit</h3><span class="dots"></span>
+            <span class="font-display font-bold text-lg whitespace-nowrap">5,50 €</span>
+          </div>
+          <p class="mt-1.5 text-sm text-piedra">Pavo, aguacate, queso fresco y rúcula</p>
+        </article>
+
+        <article class="reveal">
+          <div class="flex items-baseline">
+            <h3 class="font-display font-semibold text-lg">Crepe Pistacho Oasis</h3><span class="dots"></span>
+            <span class="font-display font-bold text-lg whitespace-nowrap">5,90 €</span>
+          </div>
+          <p class="mt-1.5 text-sm text-piedra">Crema de pistacho, plátano y coco tostado</p>
+        </article>
+
+        <article class="reveal">
+          <div class="flex items-baseline">
+            <h3 class="font-display font-semibold text-lg">Gofre Açaí Crunch</h3><span class="dots"></span>
+            <span class="font-display font-bold text-lg whitespace-nowrap">6,50 €</span>
+          </div>
+          <p class="mt-1.5 text-sm text-piedra">Base de gofre, açaí, fruta fresca y granola crujiente</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══ CONTENIDO SEO ══ -->
+    <section class="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-10">
+      <div class="reveal">
+        <h2 class="font-display font-bold text-2xl mb-3">El capricho que también puede ser saludable</h2>
+        <p class="text-cacaoL leading-relaxed">
+          En The Oasis el crepe no está reñido con cuidarse: el Crepe Salado Fit con pavo, aguacate
+          y rúcula es una comida completa, y el Gofre Açaí Crunch corona la masa belga con nuestra
+          pulpa de açaí y fruta fresca. Y cuando toca darse el gusto de verdad, el Nutella con
+          fresa nunca falla.
+        </p>
+      </div>
+      <div class="reveal">
+        <h2 class="font-display font-bold text-2xl mb-3">Recién hechos, hasta las 23:00</h2>
+        <p class="text-cacaoL leading-relaxed">
+          La masa se prepara cada día y cada crepe y gofre sale de la plancha en el momento — nunca
+          recalentado. Somos el plan perfecto de postre después de cenar por el centro de Fuengirola
+          o de merienda a la vuelta de la playa. Pide por WhatsApp y recógelo caliente, sin colas.
+        </p>
+      </div>
+
+      <!-- FAQ visible (coincide con el JSON-LD FAQPage) -->
+      <div class="reveal">
+        <h2 class="font-display font-bold text-2xl mb-5">Preguntas frecuentes</h2>
+        <div class="space-y-3">
+          <details class="bg-white rounded-2xl px-5 py-4 shadow-sm">
+            <summary class="flex items-center justify-between font-display font-semibold">
+              ¿Cuánto cuestan los crepes y gofres?
+              <svg class="faq-arrow w-4 h-4 shrink-0 ml-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 text-sm text-cacaoL">Desde 4,50 € el gofre belga clásico hasta 6,50 € el gofre Açaí Crunch. Los crepes van de 4,90 € a 5,90 €.</p>
+          </details>
+          <details class="bg-white rounded-2xl px-5 py-4 shadow-sm">
+            <summary class="flex items-center justify-between font-display font-semibold">
+              ¿Tenéis crepes salados?
+              <svg class="faq-arrow w-4 h-4 shrink-0 ml-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 text-sm text-cacaoL">Sí, el Crepe Salado Fit: pavo, aguacate, queso fresco y rúcula por 5,50 €.</p>
+          </details>
+          <details class="bg-white rounded-2xl px-5 py-4 shadow-sm">
+            <summary class="flex items-center justify-between font-display font-semibold">
+              ¿La masa es sin gluten?
+              <svg class="faq-arrow w-4 h-4 shrink-0 ml-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 text-sm text-cacaoL">Nuestras masas llevan harina de trigo (contienen gluten). Nuestros bowls y smoothies sí son naturalmente sin gluten.</p>
+          </details>
+          <details class="bg-white rounded-2xl px-5 py-4 shadow-sm">
+            <summary class="flex items-center justify-between font-display font-semibold">
+              ¿Hasta qué hora puedo pedir?
+              <svg class="faq-arrow w-4 h-4 shrink-0 ml-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 text-sm text-cacaoL">De lunes a sábado hasta las 23:00 — también somos plan de postre nocturno. Pide por WhatsApp al +34 602 38 29 12.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ UBICACIÓN COMPACTA ══ -->
+    <section class="bg-cacao text-crema py-12" aria-label="Ubicación">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="font-display font-bold text-2xl mb-3">Recógelo en el centro de Fuengirola</h2>
+        <address class="not-italic text-arena/80">Avenida Ramón y Cajal, 30 · 29640 Fuengirola, Málaga<br />Lunes a Sábado · 12:00 – 23:00</address>
+        <a href="https://maps.google.com/?q=The+Oasis,+Avenida+Ram%C3%B3n+y+Cajal+30,+29640+Fuengirola" target="_blank" rel="noopener"
+           class="btn mt-6 inline-flex items-center justify-center bg-crema text-cacao hover:bg-arena font-display font-semibold px-8 py-4 rounded-full min-h-[52px]">
+          Cómo llegar
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="bg-cacao border-t border-crema/10 text-arena/70 py-8 text-sm">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col items-center gap-3">
+      <nav class="flex flex-wrap justify-center gap-x-5 gap-y-2" aria-label="Enlaces">
+        <a href="../" class="hover:text-crema transition-colors">Inicio</a>
+        <a href="../acai-bowls-fuengirola/" class="hover:text-crema transition-colors">Açaí Bowls</a>
+        <a href="../smoothies-zumos-fuengirola/" class="hover:text-crema transition-colors">Smoothies y Zumos</a>
+        <a href="../en/" class="hover:text-crema transition-colors">English</a>
+      </nav>
+      <p class="text-xs text-arena/40">© 2026 The Oasis Fuengirola</p>
+    </div>
+  </footer>
+
+  <script>
+    /* Fade-in al hacer scroll */
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

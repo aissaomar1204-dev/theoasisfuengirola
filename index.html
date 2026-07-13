@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Aplica el idioma guardado antes del primer pintado (evita parpadeo) -->
+  <script>
+    if (localStorage.getItem('oasis-lang') === 'en') {
+      document.documentElement.classList.add('en');
+      document.documentElement.lang = 'en';
+    }
+  </script>
+
+  <!-- ============================================================
+       SEO PRINCIPAL — dominio: theoasisfuengirola.com
+  ============================================================ -->
+  <title>The Oasis Fuengirola | Açaí Bowls, Smoothies y Zumos Naturales para Llevar</title>
+  <meta name="description" content="The Oasis en Av. Ramón y Cajal 30, Fuengirola: açaí bowls premium, smoothies naturales, zumos fríos y crepes artesanales para llevar. Comida saludable en la Costa del Sol. Pide por WhatsApp y recoge en tienda." />
+  <meta name="keywords" content="açaí bowl Fuengirola, smoothies Fuengirola, comida saludable Fuengirola, zumos naturales Málaga, takeaway saludable Costa del Sol, fruit bowls, healthy food Fuengirola, acai bowl near me" />
+  <meta name="author" content="The Oasis Fuengirola" />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="ES-MA" />
+  <meta name="geo.placename" content="Fuengirola, Málaga" />
+  <meta name="theme-color" content="#FDFBF7" />
+  <link rel="canonical" href="https://theoasisfuengirola.com/" />
+  <!-- Versiones por idioma (hreflang) -->
+  <link rel="alternate" hreflang="es" href="https://theoasisfuengirola.com/" />
+  <link rel="alternate" hreflang="en" href="https://theoasisfuengirola.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://theoasisfuengirola.com/" />
+  <link rel="icon" type="image/png" href="logo.png" />
+
+  <!-- Open Graph (WhatsApp, Instagram, Facebook) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="og:site_name" content="The Oasis" />
+  <meta property="og:title" content="The Oasis Fuengirola | Açaí Bowls & Smoothies Premium" />
+  <meta property="og:description" content="Tu energía natural en el corazón de la Costa del Sol. Bowls premium, smoothies frescos y caprichos artesanales para llevar." />
+  <meta property="og:image" content="https://theoasisfuengirola.com/logo.png" />
+  <meta property="og:url" content="https://theoasisfuengirola.com/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Oasis Fuengirola | Açaí Bowls & Smoothies Premium" />
+  <meta name="twitter:description" content="Bowls premium, smoothies frescos y caprichos artesanales para llevar en Fuengirola." />
+  <meta name="twitter:image" content="https://theoasisfuengirola.com/logo.png" />
+
+  <!-- ============================================================
+       DATOS ESTRUCTURADOS (JSON-LD) — Google Maps / Rich Results
+  ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "The Oasis",
+    "image": "https://theoasisfuengirola.com/logo.png",
+    "servesCuisine": ["Healthy", "Açaí Bowls", "Smoothies", "Juices", "Crepes"],
+    "priceRange": "€",
+    "telephone": "+34602382912",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Avenida Ramón y Cajal, 30",
+      "addressLocality": "Fuengirola",
+      "addressRegion": "Málaga",
+      "postalCode": "29640",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 36.5397,
+      "longitude": -4.6249
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "12:00",
+      "closes": "23:00"
+    }],
+    "url": "https://theoasisfuengirola.com/",
+    "menu": "https://theoasisfuengirola.com/#menu",
+    "sameAs": [
+      "https://www.instagram.com/theoasisfuengirola",
+      "https://www.tiktok.com/@theoasisfuengirola"
+    ]
+  }
+  </script>
+
+  <!-- Tipografía: Poppins (titulares) + Inter (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS por CDN (prototipado rápido) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    /* Configuración de marca: paleta y fuentes personalizadas */
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            crema:  '#FDFBF7',   // Fondo principal
+            arena:  '#F3EDE2',   // Bloques alternos
+            cacao:  '#3E2723',   // Marrón madera (texto principal)
+            cacaoL: '#6D4C41',   // Marrón claro (texto secundario)
+            acai:   '#4A154B',   // Morado açaí (CTA)
+            acaiL:  '#5C2C5D',   // Morado açaí claro (hover)
+            piedra: '#9B9184'    // Gris cálido (ingredientes)
+          },
+          fontFamily: {
+            display: ['Poppins', 'sans-serif'],
+            body:    ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ==========================================================
+       SISTEMA DE IDIOMAS ES / EN
+       Cada texto existe dos veces (.lang-es / .lang-en) y el
+       botón del navbar alterna la clase "en" en <html>.
+    ========================================================== */
+    .lang-en { display: none; }
+    html.en .lang-en { display: revert; }
+    html.en .lang-es { display: none; }
+
+    /* Estado visual del botón de idioma */
+    .lang-label-es { color: #4A154B; }
+    .lang-label-en { color: #9B9184; }
+    html.en .lang-label-es { color: #9B9184; }
+    html.en .lang-label-en { color: #4A154B; }
+
+    /* ==========================================================
+       MICRO-INTERACCIONES Y ANIMACIONES
+    ========================================================== */
+
+    /* Fade-in al hacer scroll (activado por IntersectionObserver) */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s ease-out, transform .7s ease-out;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-d1 { transition-delay: .12s; }
+    .reveal-d2 { transition-delay: .24s; }
+    .reveal-d3 { transition-delay: .36s; }
+
+    /* Botones: escala suave en hover / feedback táctil en active */
+    .btn {
+      transition: transform .25s ease, background-color .25s ease,
+                  color .25s ease, box-shadow .25s ease;
+    }
+    .btn:hover  { transform: translateY(-2px) scale(1.03); }
+    .btn:active { transform: scale(.97); }
+
+    /* Línea de puntos entre producto y precio */
+    .dots {
+      flex: 1;
+      margin: 0 .6rem;
+      border-bottom: 2px dotted rgba(62, 39, 35, .25);
+      transform: translateY(-4px);
+    }
+
+    /* Píldoras de tamaño S / M / L / XL */
+    .size-pill {
+      display: inline-flex;
+      align-items: baseline;
+      gap: .35rem;
+      background: #fff;
+      border: 1px solid rgba(62, 39, 35, .12);
+      border-radius: 9999px;
+      padding: .45rem .85rem;
+      font-size: .82rem;
+      font-weight: 600;
+      color: #3E2723;
+    }
+    .size-pill b { color: #4A154B; font-family: Poppins, sans-serif; }
+    /* Variante sobre la tarjeta morada del producto estrella */
+    .size-pill-light {
+      background: rgba(255, 255, 255, .13);
+      border-color: rgba(255, 255, 255, .28);
+      color: #fff;
+    }
+    .size-pill-light b { color: #fff; }
+
+    /* Transición de paneles del menú (tabs) */
+    .tab-panel { animation: panelIn .45s ease-out; }
+    @keyframes panelIn {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Flotación suave del visual del hero */
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50%      { transform: translateY(-14px) rotate(2deg); }
+    }
+    .floaty { animation: floaty 5s ease-in-out infinite; }
+
+    /* Latido sutil del botón de WhatsApp flotante */
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.08); }
+    }
+    .heartbeat { animation: heartbeat 2.4s ease-in-out infinite; }
+
+    /* Anclas: dejar hueco bajo la navbar sticky */
+    section[id] { scroll-margin-top: 84px; }
+
+    /* Accesibilidad: respetar la preferencia de menos movimiento */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .floaty, .heartbeat { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+
+<body class="bg-crema text-cacao font-body antialiased">
+
+  <!-- ============================================================
+       NAVBAR STICKY
+  ============================================================ -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 bg-crema/90 backdrop-blur-md transition-shadow duration-300">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between gap-3 px-4 sm:px-6 h-[72px]" aria-label="Navegación principal">
+
+      <!-- Logo -->
+      <a href="#inicio" class="flex items-center gap-2.5">
+        <img src="logo.png" alt="Logo de The Oasis Fuengirola" class="h-11 w-11 rounded-full object-cover" width="44" height="44" />
+        <span class="font-display font-bold text-lg tracking-wide">The Oasis</span>
+      </a>
+
+      <!-- Enlaces (escritorio) -->
+      <ul class="hidden md:flex items-center gap-8 font-medium text-sm">
+        <li><a href="#menu" class="hover:text-acai transition-colors duration-200"><span class="lang-es">Menú</span><span class="lang-en">Menu</span></a></li>
+        <li><a href="#concepto" class="hover:text-acai transition-colors duration-200"><span class="lang-es">Concepto</span><span class="lang-en">Concept</span></a></li>
+        <li><a href="#ubicacion" class="hover:text-acai transition-colors duration-200"><span class="lang-es">Ubicación</span><span class="lang-en">Location</span></a></li>
+      </ul>
+
+      <div class="flex items-center gap-2.5">
+        <!-- Selector de idioma ES / EN -->
+        <button id="lang-toggle" class="btn flex items-center gap-1 border border-cacao/20 rounded-full px-3.5 py-2.5 text-xs font-display font-bold tracking-wide"
+                aria-label="Cambiar idioma / Switch language">
+          <span class="lang-label-es">ES</span><span class="text-cacao/25">·</span><span class="lang-label-en">EN</span>
+        </button>
+
+        <!-- CTA WhatsApp (escritorio) -->
+        <a href="https://wa.me/34602382912?text=Hola%20The%20Oasis!%20Quiero%20pedir%20para%20recoger%20%2F%20Hi!%20I%27d%20like%20to%20order%20for%20pickup."
+           target="_blank" rel="noopener"
+           class="btn hidden md:inline-flex items-center gap-2 bg-acai hover:bg-acaiL text-white font-display font-semibold text-sm px-5 py-3 rounded-full shadow-md shadow-acai/25">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.62-.93-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.8 9.8 0 0 1-4.98-1.36l-.36-.21-3.7.97.99-3.61-.24-.37a9.77 9.77 0 0 1-1.5-5.21c0-5.4 4.4-9.8 9.81-9.8 2.62 0 5.08 1.02 6.93 2.87a9.74 9.74 0 0 1 2.87 6.94c0 5.4-4.4 9.79-9.8 9.79m8.34-18.13A11.7 11.7 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.94L.06 24l6.32-1.66a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.5-8.41"/></svg>
+          <span class="lang-es">Pedir para Recoger</span><span class="lang-en">Order for Pickup</span>
+        </a>
+
+        <!-- Botón hamburguesa (móvil) -->
+        <button id="menu-toggle" class="md:hidden p-2 -mr-2" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu">
+          <svg id="icon-open" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg id="icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Menú desplegable móvil -->
+    <div id="mobile-menu" class="md:hidden hidden bg-crema border-t border-arena px-6 pb-6 pt-2 shadow-lg">
+      <ul class="flex flex-col gap-1 font-medium text-base">
+        <li><a href="#menu" class="mobile-link block py-3.5 border-b border-arena"><span class="lang-es">Menú</span><span class="lang-en">Menu</span></a></li>
+        <li><a href="#concepto" class="mobile-link block py-3.5 border-b border-arena"><span class="lang-es">Concepto</span><span class="lang-en">Concept</span></a></li>
+        <li><a href="#ubicacion" class="mobile-link block py-3.5 border-b border-arena"><span class="lang-es">Ubicación</span><span class="lang-en">Location</span></a></li>
+      </ul>
+      <a href="https://wa.me/34602382912?text=Hola%20The%20Oasis!%20Quiero%20pedir%20para%20recoger%20%2F%20Hi!%20I%27d%20like%20to%20order%20for%20pickup."
+         target="_blank" rel="noopener"
+         class="btn mt-4 flex items-center justify-center gap-2 bg-acai text-white font-display font-semibold px-5 py-4 rounded-full w-full">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.62-.93-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.8 9.8 0 0 1-4.98-1.36l-.36-.21-3.7.97.99-3.61-.24-.37a9.77 9.77 0 0 1-1.5-5.21c0-5.4 4.4-9.8 9.81-9.8 2.62 0 5.08 1.02 6.93 2.87a9.74 9.74 0 0 1 2.87 6.94c0 5.4-4.4 9.79-9.8 9.79m8.34-18.13A11.7 11.7 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.94L.06 24l6.32-1.66a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.5-8.41"/></svg>
+        <span class="lang-es">Pedir para Recoger</span><span class="lang-en">Order for Pickup</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <!-- ============================================================
+         HERO SECTION
+    ============================================================ -->
+    <section class="relative overflow-hidden pt-[104px] pb-16 sm:pt-32 sm:pb-24" aria-label="Presentación">
+
+      <!-- Manchas de color decorativas de fondo -->
+      <div class="pointer-events-none absolute -top-24 -right-24 w-80 h-80 rounded-full bg-acai/10 blur-3xl" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute top-1/2 -left-32 w-96 h-96 rounded-full bg-arena blur-3xl" aria-hidden="true"></div>
+
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-10 md:gap-6 items-center">
+
+        <!-- Texto principal -->
+        <div class="text-center md:text-left">
+          <p class="reveal visible inline-flex items-center gap-2 bg-arena text-cacaoL text-xs font-semibold tracking-[0.18em] uppercase px-4 py-2 rounded-full mb-5">
+            <!-- Icono: sol sobre el mar (Costa del Sol) -->
+            <svg class="w-4 h-4 text-acai" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="10" r="3.6"/><path d="M12 3v1.6M6.6 4.6l1.2 1.2M3 10h1.8M21 10h-1.8M17.4 4.6l-1.2 1.2M3.5 18.5c1.9-1.4 3.8-1.4 5.7 0s3.7 1.4 5.6 0 3.8-1.4 5.7 0"/></svg>
+            Fuengirola · Costa del Sol
+          </p>
+          <h1 class="reveal visible font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
+            <span class="lang-es">Tu energía natural en el corazón de la <span class="text-acai">Costa del Sol</span></span>
+            <span class="lang-en">Your natural energy in the heart of the <span class="text-acai">Costa del Sol</span></span>
+          </h1>
+          <p class="reveal visible reveal-d1 mt-5 text-base sm:text-lg text-cacaoL max-w-md mx-auto md:mx-0">
+            <span class="lang-es">Bowls premium, smoothies frescos y caprichos artesanales para llevar.</span>
+            <span class="lang-en">Premium bowls, fresh smoothies and artisan treats to go.</span>
+          </p>
+
+          <!-- CTAs del hero: botones grandes, aptos para pulgar -->
+          <div class="reveal visible reveal-d2 mt-8 flex flex-col sm:flex-row gap-3.5 justify-center md:justify-start">
+            <a href="#menu"
+               class="btn inline-flex items-center justify-center gap-2 bg-acai hover:bg-acaiL text-white font-display font-semibold text-base px-8 py-4 rounded-full shadow-lg shadow-acai/30 min-h-[52px]">
+              <!-- Icono: bowl con fruta -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11.5h17a8.5 8.5 0 0 1-17 0z"/><circle cx="8" cy="8" r="1.7"/><circle cx="12" cy="5.8" r="1.7"/><circle cx="16" cy="8" r="1.7"/></svg>
+              <span class="lang-es">Ver Carta</span><span class="lang-en">View Menu</span>
+            </a>
+            <a href="https://maps.google.com/?q=The+Oasis,+Avenida+Ram%C3%B3n+y+Cajal+30,+29640+Fuengirola" target="_blank" rel="noopener"
+               class="btn inline-flex items-center justify-center gap-2 bg-transparent border-2 border-cacao text-cacao hover:bg-cacao hover:text-crema font-display font-semibold text-base px-8 py-4 rounded-full min-h-[52px]">
+              <!-- Icono: pin de mapa -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.5S5 15.8 5 10.2a7 7 0 0 1 14 0c0 5.6-7 11.3-7 11.3z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              <span class="lang-es">Cómo llegar</span><span class="lang-en">Get Directions</span>
+            </a>
+          </div>
+
+          <!-- Prueba social rápida -->
+          <p class="reveal visible reveal-d3 mt-7 inline-flex items-center gap-2 text-sm text-piedra">
+            <svg class="w-4 h-4 text-acai" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.7 5.5 6 .9-4.3 4.2 1 6-5.4-2.8-5.4 2.8 1-6L3.3 9.4l6-.9L12 3z"/></svg>
+            <span class="lang-es">Ingredientes frescos, preparados al momento, todos los días.</span>
+            <span class="lang-en">Fresh ingredients, made to order, every day.</span>
+          </p>
+        </div>
+
+        <!-- Visual del hero.
+             Para usar una foto real del açaí bowl, sustituye este bloque por:
+             <img src="hero-bowl.jpg" alt="Açaí bowl premium de The Oasis" class="rounded-full shadow-2xl floaty" /> -->
+        <div class="reveal visible reveal-d2 relative flex justify-center" aria-hidden="true">
+          <div class="floaty relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+            <!-- Aro exterior degradado -->
+            <div class="absolute inset-0 rounded-full bg-gradient-to-br from-acai/15 via-arena to-acai/5"></div>
+            <!-- Logo circular como pieza central -->
+            <img src="logo.png" alt="" class="absolute inset-5 w-[calc(100%-2.5rem)] h-[calc(100%-2.5rem)] object-contain drop-shadow-2xl" />
+            <!-- Chips flotantes con iconos propios -->
+            <span class="absolute -top-1 -left-3 sm:top-2 sm:-left-8 flex items-center gap-1.5 bg-white shadow-lg rounded-full px-4 py-2 text-xs font-semibold text-cacao rotate-[-6deg]">
+              <svg class="w-4 h-4 text-acai" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="8.5" cy="13.5" r="3"/><circle cx="15.5" cy="13.5" r="3"/><circle cx="12" cy="8.5" r="3"/><path d="M12 5.5c.3-1.8 1.4-2.7 3-3"/></svg>
+              Açaí premium
+            </span>
+            <span class="absolute bottom-3 -right-2 sm:bottom-8 sm:-right-8 flex items-center gap-1.5 bg-white shadow-lg rounded-full px-4 py-2 text-xs font-semibold text-cacao rotate-[5deg]">
+              <svg class="w-4 h-4 text-acai" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 19C5 9.5 11.5 4.5 20 4.5c0 8.5-5 14.5-15 14.5z"/><path d="M5 19c2.5-5.5 6.5-9.5 12-12"/></svg>
+              100% natural
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECCIÓN MENÚ — Tabs interactivas
+         Ítems ordenados de más barato a más caro.
+         Bowls: 4 tamaños (S/M/L/XL) · Bebidas: 3 tamaños (S/M/L)
+    ============================================================ -->
+    <section id="menu" class="bg-arena/60 py-16 sm:py-24" aria-label="Nuestra carta">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+
+        <header class="text-center mb-10 reveal">
+          <p class="text-acai font-display font-semibold text-sm tracking-[0.2em] uppercase mb-3">
+            <span class="lang-es">Nuestra carta</span><span class="lang-en">Our menu</span>
+          </p>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-tight">
+            <span class="lang-es">Frescura que se pide para llevar</span>
+            <span class="lang-en">Freshness made to go</span>
+          </h2>
+          <p class="mt-3 text-cacaoL">
+            <span class="lang-es">Elige tu categoría y tu tamaño: S, M, L o XL.</span>
+            <span class="lang-en">Pick your category and your size: S, M, L or XL.</span>
+          </p>
+        </header>
+
+        <!-- Selector de pestañas -->
+        <div class="reveal flex justify-center mb-10">
+          <div role="tablist" aria-label="Categorías del menú"
+               class="inline-flex flex-wrap justify-center gap-1.5 bg-crema p-1.5 rounded-full shadow-sm">
+            <button role="tab" id="tab-bowls" aria-selected="true" aria-controls="panel-bowls" data-tab="bowls"
+                    class="tab-btn btn inline-flex items-center gap-1.5 font-display font-semibold text-sm px-4 sm:px-5 py-3 rounded-full min-h-[46px] bg-acai text-white">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11.5h17a8.5 8.5 0 0 1-17 0z"/><circle cx="8" cy="8" r="1.7"/><circle cx="12" cy="5.8" r="1.7"/><circle cx="16" cy="8" r="1.7"/></svg>
+              Açaí &amp; Fruit Bowls
+            </button>
+            <button role="tab" id="tab-smoothies" aria-selected="false" aria-controls="panel-smoothies" data-tab="smoothies"
+                    class="tab-btn btn inline-flex items-center gap-1.5 font-display font-semibold text-sm px-4 sm:px-5 py-3 rounded-full min-h-[46px] text-cacaoL">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 4h11l-1.4 15.2a1.8 1.8 0 0 1-1.8 1.6H9.7a1.8 1.8 0 0 1-1.8-1.6L6.5 4z"/><path d="M7 9.5h10M12.8 7.5 16.5 2"/></svg>
+              <span class="lang-es">Smoothies &amp; Zumos</span><span class="lang-en">Smoothies &amp; Juices</span>
+            </button>
+            <button role="tab" id="tab-crepes" aria-selected="false" aria-controls="panel-crepes" data-tab="crepes"
+                    class="tab-btn btn inline-flex items-center gap-1.5 font-display font-semibold text-sm px-4 sm:px-5 py-3 rounded-full min-h-[46px] text-cacaoL">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3.5"/><path d="M9.3 4v16M14.7 4v16M4 9.3h16M4 14.7h16"/></svg>
+              <span class="lang-es">Crepes &amp; Gofres</span><span class="lang-en">Crepes &amp; Waffles</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ── Panel 1: Açaí & Fruit Bowls (de más barato a más caro) ── -->
+        <div role="tabpanel" id="panel-bowls" aria-labelledby="tab-bowls" data-panel="bowls" class="tab-panel space-y-7">
+
+          <article class="menu-item">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-lg">Coco Zen</h3>
+              <span class="dots"></span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 5,50 €</span>
+            </div>
+            <p class="mt-1.5 text-sm text-piedra">
+              <span class="lang-es">Yogur de coco, frutos rojos, miel de Málaga y granola artesanal</span>
+              <span class="lang-en">Coconut yogurt, red berries, Málaga honey and artisan granola</span>
+            </p>
+            <div class="mt-2.5 flex flex-wrap gap-2">
+              <span class="size-pill"><b>S</b> 5,50 €</span><span class="size-pill"><b>M</b> 6,90 €</span><span class="size-pill"><b>L</b> 8,20 €</span><span class="size-pill"><b>XL</b> 9,50 €</span>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-lg">Tropical Escape</h3>
+              <span class="dots"></span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 5,90 €</span>
+            </div>
+            <p class="mt-1.5 text-sm text-piedra">
+              <span class="lang-es">Mango, piña, maracuyá, coco rallado y granola de miel</span>
+              <span class="lang-en">Mango, pineapple, passion fruit, shredded coconut and honey granola</span>
+            </p>
+            <div class="mt-2.5 flex flex-wrap gap-2">
+              <span class="size-pill"><b>S</b> 5,90 €</span><span class="size-pill"><b>M</b> 7,20 €</span><span class="size-pill"><b>L</b> 8,50 €</span><span class="size-pill"><b>XL</b> 9,90 €</span>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-lg">Green Recovery</h3>
+              <span class="dots"></span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 6,20 €</span>
+            </div>
+            <p class="mt-1.5 text-sm text-piedra">
+              <span class="lang-es">Espinaca, plátano, espirulina, kiwi, almendra laminada y granola</span>
+              <span class="lang-en">Spinach, banana, spirulina, kiwi, sliced almonds and granola</span>
+            </p>
+            <div class="mt-2.5 flex flex-wrap gap-2">
+              <span class="size-pill"><b>S</b> 6,20 €</span><span class="size-pill"><b>M</b> 7,50 €</span><span class="size-pill"><b>L</b> 8,80 €</span><span class="size-pill"><b>XL</b> 10,20 €</span>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-lg">Dragon Sunrise</h3>
+              <span class="dots"></span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 6,50 €</span>
+            </div>
+            <p class="mt-1.5 text-sm text-piedra">
+              <span class="lang-es">Pitaya (fruta del dragón), mango, kiwi, chía y granola crujiente</span>
+              <span class="lang-en">Dragon fruit, mango, kiwi, chia seeds and crunchy granola</span>
+            </p>
+            <div class="mt-2.5 flex flex-wrap gap-2">
+              <span class="size-pill"><b>S</b> 6,50 €</span><span class="size-pill"><b>M</b> 7,90 €</span><span class="size-pill"><b>L</b> 9,20 €</span><span class="size-pill"><b>XL</b> 10,50 €</span>
+            </div>
+          </article>
+
+          <!-- Producto estrella destacado -->
+          <article class="relative bg-gradient-to-br from-acai to-acaiL text-white rounded-3xl p-6 sm:p-7 shadow-xl shadow-acai/20">
+            <span class="absolute -top-3 left-6 inline-flex items-center gap-1 bg-crema text-acai text-xs font-bold px-3.5 py-1.5 rounded-full shadow">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.7 5.5 6 .9-4.3 4.2 1 6-5.4-2.8-5.4 2.8 1-6L3.3 9.4l6-.9L12 3z"/></svg>
+              <span class="lang-es">TOP VENTAS</span><span class="lang-en">BEST SELLER</span>
+            </span>
+            <div class="flex items-baseline">
+              <h3 class="font-display font-bold text-xl">Açaí Oasis Supreme</h3>
+              <span class="dots !border-white/30"></span>
+              <span class="text-sm text-white/70 font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 6,90 €</span>
+            </div>
+            <p class="mt-2 text-sm text-white/75">
+              <span class="lang-es">Açaí premium, granola artesanal, fresa, plátano, coco tostado y crema de cacahuete</span>
+              <span class="lang-en">Premium açaí, artisan granola, strawberry, banana, toasted coconut and peanut butter</span>
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="size-pill size-pill-light"><b>S</b> 6,90 €</span><span class="size-pill size-pill-light"><b>M</b> 8,20 €</span><span class="size-pill size-pill-light"><b>L</b> 9,50 €</span><span class="size-pill size-pill-light"><b>XL</b> 10,90 €</span>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-lg">Protein Power</h3>
+              <span class="dots"></span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 7,50 €</span>
+            </div>
+            <p class="mt-1.5 text-sm text-piedra">
+              <span class="lang-es">Açaí, proteína whey, plátano, nibs de cacao, crema de cacahuete y granola</span>
+              <span class="lang-en">Açaí, whey protein, banana, cacao nibs, peanut butter and granola</span>
+            </p>
+            <div class="mt-2.5 flex flex-wrap gap-2">
+              <span class="size-pill"><b>S</b> 7,50 €</span><span class="size-pill"><b>M</b> 8,90 €</span><span class="size-pill"><b>L</b> 10,20 €</span><span class="size-pill"><b>XL</b> 11,50 €</span>
+            </div>
+          </article>
+
+          <p class="text-center text-xs text-piedra pt-1">
+            <span class="lang-es">Topping extra +0,90 € · Extra de proteína +1,50 €</span>
+            <span class="lang-en">Extra topping +€0.90 · Extra protein +€1.50</span>
+          </p>
+        </div>
+
+        <!-- ── Panel 2: Smoothies & Zumos (de más barato a más caro) ── -->
+        <div role="tabpanel" id="panel-smoothies" aria-labelledby="tab-smoothies" data-panel="smoothies" class="tab-panel space-y-7 hidden">
+
+          <article class="menu-item">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-lg"><span class="lang-es">Zumo de Naranja Natural</span><span class="lang-en">Fresh Orange Juice</span></h3>
+              <span class="dots"></span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 2,90 €</span>
+            </div>
+            <p class="mt-1.5 text-sm text-piedra">
+              <span class="lang-es">100% naranja, exprimido al momento</span>
+              <span class="lang-en">100% orange, squeezed to order</span>
+            </p>
+            <div class="mt-2.5 flex flex-wrap gap-2">
+              <span class="size-pill"><b>S</b> 2,90 €</span><span class="size-pill"><b>M</b> 3,90 €</span><span class="size-pill"><b>L</b> 4,90 €</span>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-lg">Detox Antiox</h3>
+              <span class="dots"></span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 3,50 €</span>
+            </div>
+            <p class="mt-1.5 text-sm text-piedra">
+              <span class="lang-es">Remolacha, zanahoria, manzana y jengibre — prensado en frío</span>
+              <span class="lang-en">Beetroot, carrot, apple and ginger — cold-pressed</span>
+            </p>
+            <div class="mt-2.5 flex flex-wrap gap-2">
+              <span class="size-pill"><b>S</b> 3,50 €</span><span class="size-pill"><b>M</b> 4,50 €</span><span class="size-pill"><b>L</b> 5,50 €</span>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-lg">Berry Boost</h3>
+              <span class="dots"></span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 3,90 €</span>
+            </div>
+            <p class="mt-1.5 text-sm text-piedra">
+              <span class="lang-es">Frutos rojos, plátano y bebida de almendras</span>
+              <span class="lang-en">Red berries, banana and almond milk</span>
+            </p>
+            <div class="mt-2.5 flex flex-wrap gap-2">
+              <span class="size-pill"><b>S</b> 3,90 €</span><span class="size-pill"><b>M</b> 4,90 €</span><span class="size-pill"><b>L</b> 5,90 €</span>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-lg">Sunset Fuengirola</h3>
+              <span class="dots"></span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 4,20 €</span>
+            </div>
+            <p class="mt-1.5 text-sm text-piedra">
+              <span class="lang-es">Mango, fresa, naranja y plátano</span>
+              <span class="lang-en">Mango, strawberry, orange and banana</span>
+            </p>
+            <div class="mt-2.5 flex flex-wrap gap-2">
+              <span class="size-pill"><b>S</b> 4,20 €</span><span class="size-pill"><b>M</b> 5,20 €</span><span class="size-pill"><b>L</b> 6,20 €</span>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-lg">Verde Vital</h3>
+              <span class="dots"></span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 4,50 €</span>
+            </div>
+            <p class="mt-1.5 text-sm text-piedra">
+              <span class="lang-es">Espinaca, manzana verde, apio, jengibre y limón</span>
+              <span class="lang-en">Spinach, green apple, celery, ginger and lemon</span>
+            </p>
+            <div class="mt-2.5 flex flex-wrap gap-2">
+              <span class="size-pill"><b>S</b> 4,50 €</span><span class="size-pill"><b>M</b> 5,50 €</span><span class="size-pill"><b>L</b> 6,50 €</span>
+            </div>
+          </article>
+
+          <!-- El clásico de la casa destacado -->
+          <article class="relative bg-gradient-to-br from-cacao to-cacaoL text-white rounded-3xl p-6 sm:p-7 shadow-xl shadow-cacao/25">
+            <span class="absolute -top-3 left-6 inline-flex items-center gap-1 bg-crema text-cacao text-xs font-bold px-3.5 py-1.5 rounded-full shadow">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5S4.5 15.7 2.9 11A5.2 5.2 0 0 1 12 6.4 5.2 5.2 0 0 1 21.1 11c-1.6 4.7-9.1 9.5-9.1 9.5z"/></svg>
+              <span class="lang-es">EL CLÁSICO</span><span class="lang-en">HOUSE CLASSIC</span>
+            </span>
+            <div class="flex items-baseline">
+              <h3 class="font-display font-bold text-xl">Batido Oasis</h3>
+              <span class="dots !border-white/30"></span>
+              <span class="text-sm text-white/70 font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 4,70 €</span>
+            </div>
+            <p class="mt-2 text-sm text-white/75">
+              <span class="lang-es">Aguacate, dátiles, almendra y bebida de almendras — el que enamoraba a todos</span>
+              <span class="lang-en">Avocado, dates, almond and almond milk — the one everyone fell in love with</span>
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="size-pill size-pill-light"><b>S</b> 4,70 €</span><span class="size-pill size-pill-light"><b>M</b> 5,70 €</span><span class="size-pill size-pill-light"><b>L</b> 6,70 €</span>
+            </div>
+          </article>
+
+          <article class="menu-item">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-lg">Protein Shake Oasis</h3>
+              <span class="dots"></span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 4,90 €</span>
+            </div>
+            <p class="mt-1.5 text-sm text-piedra">
+              <span class="lang-es">Whey, plátano, avena, cacao y bebida vegetal a elegir</span>
+              <span class="lang-en">Whey, banana, oats, cacao and your choice of plant milk</span>
+            </p>
+            <div class="mt-2.5 flex flex-wrap gap-2">
+              <span class="size-pill"><b>S</b> 4,90 €</span><span class="size-pill"><b>M</b> 5,90 €</span><span class="size-pill"><b>L</b> 6,90 €</span>
+            </div>
+          </article>
+
+          <p class="text-center text-xs text-piedra pt-1">
+            <span class="lang-es">Sin azúcares añadidos · Bebidas vegetales sin coste extra</span>
+            <span class="lang-en">No added sugars · Plant milks at no extra cost</span>
+          </p>
+        </div>
+
+        <!-- ── Panel 3: Crepes & Gofres (de más barato a más caro) ── -->
+        <div role="tabpanel" id="panel-crepes" aria-labelledby="tab-crepes" data-panel="crepes" class="tab-panel space-y-7 hidden">
+
+          <article class="menu-item">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-lg"><span class="lang-es">Gofre Belga Clásico</span><span class="lang-en">Classic Belgian Waffle</span></h3>
+              <span class="dots"></span>
+              <span class="font-display font-bold text-lg whitespace-nowrap">4,50 €</span>
+            </div>
+            <p class="mt-1.5 text-sm text-piedra">
+              <span class="lang-es">Azúcar perlado, con sirope de arce o chocolate fundido</span>
+              <span class="lang-en">Pearl sugar, with maple syrup or melted chocolate</span>
+            </p>
+          </article>
+
+          <article class="menu-item">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-lg"><span class="lang-es">Crepe Nutella &amp; Fresa</span><span class="lang-en">Nutella &amp; Strawberry Crepe</span></h3>
+              <span class="dots"></span>
+              <span class="font-display font-bold text-lg whitespace-nowrap">4,90 €</span>
+            </div>
+            <p class="mt-1.5 text-sm text-piedra">
+              <span class="lang-es">El clásico irresistible con fresas frescas de temporada</span>
+              <span class="lang-en">The irresistible classic with fresh seasonal strawberries</span>
+            </p>
+          </article>
+
+          <article class="menu-item">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-lg"><span class="lang-es">Crepe Salado Fit</span><span class="lang-en">Savoury Fit Crepe</span></h3>
+              <span class="dots"></span>
+              <span class="font-display font-bold text-lg whitespace-nowrap">5,50 €</span>
+            </div>
+            <p class="mt-1.5 text-sm text-piedra">
+              <span class="lang-es">Pavo, aguacate, queso fresco y rúcula</span>
+              <span class="lang-en">Turkey, avocado, fresh cheese and arugula</span>
+            </p>
+          </article>
+
+          <article class="menu-item">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-lg"><span class="lang-es">Crepe Pistacho Oasis</span><span class="lang-en">Pistachio Oasis Crepe</span></h3>
+              <span class="dots"></span>
+              <span class="font-display font-bold text-lg whitespace-nowrap">5,90 €</span>
+            </div>
+            <p class="mt-1.5 text-sm text-piedra">
+              <span class="lang-es">Crema de pistacho, plátano y coco tostado</span>
+              <span class="lang-en">Pistachio cream, banana and toasted coconut</span>
+            </p>
+          </article>
+
+          <article class="menu-item">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-lg"><span class="lang-es">Gofre Açaí Crunch</span><span class="lang-en">Açaí Crunch Waffle</span></h3>
+              <span class="dots"></span>
+              <span class="font-display font-bold text-lg whitespace-nowrap">6,50 €</span>
+            </div>
+            <p class="mt-1.5 text-sm text-piedra">
+              <span class="lang-es">Base de gofre, açaí, fruta fresca y granola crujiente</span>
+              <span class="lang-en">Waffle base, açaí, fresh fruit and crunchy granola</span>
+            </p>
+          </article>
+        </div>
+
+        <!-- CTA de cierre de sección -->
+        <div class="reveal mt-12 text-center">
+          <a href="https://wa.me/34602382912?text=Hola%20The%20Oasis!%20Quiero%20pedir%20para%20recoger%20%2F%20Hi!%20I%27d%20like%20to%20order%20for%20pickup."
+             target="_blank" rel="noopener"
+             class="btn inline-flex items-center justify-center gap-2 bg-cacao hover:bg-acai text-crema font-display font-semibold text-base px-8 py-4 rounded-full shadow-lg min-h-[52px]">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.62-.93-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.8 9.8 0 0 1-4.98-1.36l-.36-.21-3.7.97.99-3.61-.24-.37a9.77 9.77 0 0 1-1.5-5.21c0-5.4 4.4-9.8 9.81-9.8 2.62 0 5.08 1.02 6.93 2.87a9.74 9.74 0 0 1 2.87 6.94c0 5.4-4.4 9.79-9.8 9.79m8.34-18.13A11.7 11.7 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.94L.06 24l6.32-1.66a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.5-8.41"/></svg>
+            <span class="lang-es">Pide ahora por WhatsApp</span><span class="lang-en">Order now on WhatsApp</span>
+          </a>
+          <p class="mt-3 text-xs text-piedra">
+            <span class="lang-es">Lo preparamos al momento y te avisamos cuando esté listo.</span>
+            <span class="lang-en">We make it fresh and let you know when it's ready.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECCIÓN CONCEPTO / VALORES
+    ============================================================ -->
+    <section id="concepto" class="py-16 sm:py-24" aria-label="Nuestro concepto">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+        <header class="text-center mb-12 reveal">
+          <p class="text-acai font-display font-semibold text-sm tracking-[0.2em] uppercase mb-3">
+            <span class="lang-es">El concepto</span><span class="lang-en">The concept</span>
+          </p>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-tight">
+            <span class="lang-es">Un refugio de frescura y energía</span>
+            <span class="lang-en">A refuge of freshness and energy</span>
+          </h2>
+        </header>
+
+        <div class="grid sm:grid-cols-3 gap-6">
+          <!-- Valor 1: hoja (frescura) -->
+          <article class="reveal bg-white rounded-3xl p-8 text-center shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-arena flex items-center justify-center" aria-hidden="true">
+              <svg class="w-8 h-8 text-acai" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 19C5 9.5 11.5 4.5 20 4.5c0 8.5-5 14.5-15 14.5z"/><path d="M5 19c2.5-5.5 6.5-9.5 12-12"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-lg mb-2">
+              <span class="lang-es">Ingredientes 100% Frescos</span>
+              <span class="lang-en">100% Fresh Ingredients</span>
+            </h3>
+            <p class="text-sm text-cacaoL leading-relaxed">
+              <span class="lang-es">Fruta de temporada seleccionada cada mañana. Sin conservantes ni azúcares añadidos.</span>
+              <span class="lang-en">Seasonal fruit hand-picked every morning. No preservatives, no added sugar.</span>
+            </p>
+          </article>
+
+          <!-- Valor 2: gorro de chef (al momento) -->
+          <article class="reveal reveal-d1 bg-white rounded-3xl p-8 text-center shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-arena flex items-center justify-center" aria-hidden="true">
+              <svg class="w-8 h-8 text-acai" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M7 17.5v-3.6c-2-.4-3.5-2-3.5-4A4.2 4.2 0 0 1 8 5.8a4.5 4.5 0 0 1 8 0 4.2 4.2 0 0 1 4.5 4.1c0 2-1.5 3.6-3.5 4v3.6H7z"/><path d="M7 21h10"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-lg mb-2">
+              <span class="lang-es">Preparación al Momento</span>
+              <span class="lang-en">Made to Order</span>
+            </h3>
+            <p class="text-sm text-cacaoL leading-relaxed">
+              <span class="lang-es">Cada bowl y cada smoothie se monta delante de ti, recién hecho para llevar.</span>
+              <span class="lang-en">Every bowl and smoothie is built in front of you, freshly made to go.</span>
+            </p>
+          </article>
+
+          <!-- Valor 3: rayo (energía) -->
+          <article class="reveal reveal-d2 bg-white rounded-3xl p-8 text-center shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-arena flex items-center justify-center" aria-hidden="true">
+              <svg class="w-8 h-8 text-acai" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M13 2 5.5 13H11l-1 9 7.5-11H12l1-9z"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-lg mb-2">
+              <span class="lang-es">Recarga tu Energía</span>
+              <span class="lang-en">Recharge Your Energy</span>
+            </h3>
+            <p class="text-sm text-cacaoL leading-relaxed">
+              <span class="lang-es">El aliado perfecto post-entreno, para un día de playa o para cuidarte sin renunciar al sabor.</span>
+              <span class="lang-en">The perfect post-workout ally, beach-day fuel, or a treat that still takes care of you.</span>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECCIÓN UBICACIÓN
+    ============================================================ -->
+    <section id="ubicacion" class="bg-cacao text-crema py-16 sm:py-24" aria-label="Ubicación y horarios">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-10 items-center">
+
+        <div class="reveal">
+          <p class="text-arena/70 font-display font-semibold text-sm tracking-[0.2em] uppercase mb-3">
+            <span class="lang-es">Visítanos</span><span class="lang-en">Visit us</span>
+          </p>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-tight mb-6">
+            <span class="lang-es">Te esperamos en Fuengirola</span>
+            <span class="lang-en">See you in Fuengirola</span>
+          </h2>
+
+          <address class="not-italic space-y-4 text-arena/90">
+            <p class="flex items-start gap-3">
+              <svg class="w-5 h-5 mt-0.5 shrink-0 text-arena" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.5S5 15.8 5 10.2a7 7 0 0 1 14 0c0 5.6-7 11.3-7 11.3z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              <span>Avenida Ramón y Cajal, 30<br />29640 Fuengirola, Málaga</span>
+            </p>
+            <p class="flex items-start gap-3">
+              <svg class="w-5 h-5 mt-0.5 shrink-0 text-arena" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.6"/><path d="M12 7.2V12l3.4 2"/></svg>
+              <span>
+                <span class="lang-es">Lunes a Sábado · <time>12:00</time> – <time>23:00</time><br /><span class="text-arena/60 text-sm">Domingo cerrado</span></span>
+                <span class="lang-en">Monday to Saturday · <time>12:00</time> – <time>23:00</time><br /><span class="text-arena/60 text-sm">Closed on Sundays</span></span>
+              </span>
+            </p>
+            <p class="flex items-start gap-3">
+              <svg class="w-5 h-5 mt-0.5 shrink-0 text-arena" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 3.5H9l1.8 4.7-2.3 1.5a12.5 12.5 0 0 0 5.8 5.8l1.5-2.3 4.7 1.8v3.5a2 2 0 0 1-2.2 2A17 17 0 0 1 3.5 5.7a2 2 0 0 1 2-2.2z"/></svg>
+              <a href="tel:+34602382912" class="underline decoration-arena/40 underline-offset-4 hover:text-white transition-colors">+34 602 38 29 12</a>
+            </p>
+          </address>
+
+          <a href="https://maps.google.com/?q=The+Oasis,+Avenida+Ram%C3%B3n+y+Cajal+30,+29640+Fuengirola" target="_blank" rel="noopener"
+             class="btn mt-8 inline-flex items-center justify-center gap-2 bg-crema text-cacao hover:bg-arena font-display font-semibold px-8 py-4 rounded-full min-h-[52px]">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4.5-5 2v13l5-2 6 2 5-2v-13l-5 2-6-2z"/><path d="M9 4.5v13M15 6.5v13"/></svg>
+            <span class="lang-es">Abrir en Google Maps</span><span class="lang-en">Open in Google Maps</span>
+          </a>
+        </div>
+
+        <!-- Tarjeta-resumen con el logo -->
+        <div class="reveal reveal-d1 flex justify-center">
+          <div class="bg-crema/5 border border-crema/15 rounded-3xl p-8 sm:p-10 text-center max-w-xs">
+            <img src="logo.png" alt="" class="w-28 h-28 mx-auto mb-5 rounded-full" loading="lazy" width="112" height="112" />
+            <p class="font-display font-bold text-xl">The Oasis</p>
+            <p class="text-sm text-arena/70 mt-1.5">Healthy takeaway · Açaí bowls · Smoothies</p>
+            <p class="text-xs text-arena/50 mt-4">
+              <span class="lang-es">A pie de calle, en plena Avenida Ramón y Cajal.</span>
+              <span class="lang-en">Street-level, right on Avenida Ramón y Cajal.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="bg-cacao border-t border-crema/10 text-arena/70 py-10">
+    <!-- Enlaces internos a las landings de categoría (SEO) -->
+    <nav aria-label="Especialidades" class="max-w-6xl mx-auto px-4 sm:px-6 pb-7 mb-7 border-b border-crema/10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+      <a href="acai-bowls-fuengirola/" class="hover:text-crema transition-colors"><span class="lang-es">Açaí Bowls en Fuengirola</span><span class="lang-en">Açaí Bowls in Fuengirola</span></a>
+      <a href="smoothies-zumos-fuengirola/" class="hover:text-crema transition-colors"><span class="lang-es">Smoothies y Zumos Naturales</span><span class="lang-en">Smoothies &amp; Fresh Juices</span></a>
+      <a href="crepes-gofres-fuengirola/" class="hover:text-crema transition-colors"><span class="lang-es">Crepes y Gofres Artesanales</span><span class="lang-en">Artisan Crepes &amp; Waffles</span></a>
+      <a href="en/" hreflang="en" class="hover:text-crema transition-colors">English</a>
+    </nav>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6 text-sm">
+
+      <div class="flex items-center gap-2.5">
+        <img src="logo.png" alt="" class="h-9 w-9 rounded-full" loading="lazy" width="36" height="36" />
+        <span class="font-display font-semibold text-crema">The Oasis</span>
+      </div>
+
+      <!-- Redes sociales: actualiza los usuarios reales -->
+      <nav aria-label="Redes sociales" class="flex items-center gap-5">
+        <a href="https://www.instagram.com/theoasisfuengirola" target="_blank" rel="noopener"
+           class="hover:text-crema transition-colors duration-200 flex items-center gap-1.5">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          Instagram
+        </a>
+        <a href="https://www.tiktok.com/@theoasisfuengirola" target="_blank" rel="noopener"
+           class="hover:text-crema transition-colors duration-200 flex items-center gap-1.5">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298 0 .595.045.88.13V9.4a6.84 6.84 0 0 0-.88-.05A6.33 6.33 0 0 0 5.16 20.5a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.5z"/></svg>
+          TikTok
+        </a>
+      </nav>
+
+      <div class="flex flex-col sm:items-end items-center gap-1">
+        <!-- Enlace a la carta para el televisor del local -->
+        <a href="carta.html" class="hover:text-crema transition-colors duration-200 flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="12.5" rx="2"/><path d="M9 21.5h6"/></svg>
+          <span class="lang-es">Carta TV del local</span><span class="lang-en">In-store TV menu</span>
+        </a>
+        <p class="text-xs text-arena/40">© 2026 The Oasis Fuengirola</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp (siempre accesible en móvil) -->
+  <a href="https://wa.me/34602382912?text=Hola%20The%20Oasis!%20Quiero%20pedir%20para%20recoger%20%2F%20Hi!%20I%27d%20like%20to%20order%20for%20pickup."
+     target="_blank" rel="noopener" aria-label="Pedir por WhatsApp"
+     class="heartbeat fixed bottom-5 right-5 z-40 w-14 h-14 bg-[#25D366] rounded-full shadow-xl shadow-black/20 flex items-center justify-center md:hidden">
+    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.62-.93-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.8 9.8 0 0 1-4.98-1.36l-.36-.21-3.7.97.99-3.61-.24-.37a9.77 9.77 0 0 1-1.5-5.21c0-5.4 4.4-9.8 9.81-9.8 2.62 0 5.08 1.02 6.93 2.87a9.74 9.74 0 0 1 2.87 6.94c0 5.4-4.4 9.79-9.8 9.79m8.34-18.13A11.7 11.7 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.94L.06 24l6.32-1.66a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.5-8.41"/></svg>
+  </a>
+
+  <!-- ============================================================
+       JAVASCRIPT VANILLA
+  ============================================================ -->
+  <script>
+    /* ── 1. Selector de idioma ES / EN ─────────────────────────── */
+    document.getElementById('lang-toggle').addEventListener('click', () => {
+      const toEnglish = !document.documentElement.classList.contains('en');
+      document.documentElement.classList.toggle('en', toEnglish);
+      document.documentElement.lang = toEnglish ? 'en' : 'es';
+      localStorage.setItem('oasis-lang', toEnglish ? 'en' : 'es');
+    });
+
+    /* ── 2. Navbar: sombra al hacer scroll ─────────────────────── */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('shadow-md', window.scrollY > 10);
+    }, { passive: true });
+
+    /* ── 3. Menú hamburguesa (móvil) ───────────────────────────── */
+    const toggleBtn  = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen   = document.getElementById('icon-open');
+    const iconClose  = document.getElementById('icon-close');
+
+    function closeMobileMenu() {
+      mobileMenu.classList.add('hidden');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      if (isOpen) { closeMobileMenu(); return; }
+      mobileMenu.classList.remove('hidden');
+      iconOpen.classList.add('hidden');
+      iconClose.classList.remove('hidden');
+      toggleBtn.setAttribute('aria-expanded', 'true');
+    });
+
+    /* Cerrar el menú al pulsar un enlace (mejor UX táctil) */
+    document.querySelectorAll('.mobile-link').forEach(link =>
+      link.addEventListener('click', closeMobileMenu)
+    );
+
+    /* ── 4. Sistema de pestañas del menú ───────────────────────── */
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabPanels  = document.querySelectorAll('[data-panel]');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.tab;
+
+        /* Estado visual de los botones */
+        tabButtons.forEach(b => {
+          const active = b === btn;
+          b.classList.toggle('bg-acai',    active);
+          b.classList.toggle('text-white', active);
+          b.classList.toggle('text-cacaoL', !active);
+          b.setAttribute('aria-selected', active);
+        });
+
+        /* Mostrar solo el panel elegido (reinicia la animación de entrada) */
+        tabPanels.forEach(panel => {
+          const show = panel.dataset.panel === target;
+          panel.classList.toggle('hidden', !show);
+          if (show) {
+            panel.classList.remove('tab-panel');
+            void panel.offsetWidth; /* fuerza reflow para relanzar la animación */
+            panel.classList.add('tab-panel');
+          }
+        });
+      });
+    });
+
+    /* ── 5. Fade-in al hacer scroll (IntersectionObserver) ─────── */
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); /* animar solo una vez */
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

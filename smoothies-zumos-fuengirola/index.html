@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ══ SEO: landing de categoría — keyword "smoothies / zumos naturales Fuengirola" ══ -->
+  <title>Smoothies y Zumos Naturales en Fuengirola desde 2,90 € | The Oasis</title>
+  <meta name="description" content="Smoothies naturales, zumo de naranja recién exprimido y zumos prensados en frío en Fuengirola. Sin azúcares añadidos, desde 2,90 €. Av. Ramón y Cajal 30. Pide para recoger por WhatsApp." />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="ES-MA" />
+  <meta name="geo.placename" content="Fuengirola, Málaga" />
+  <meta name="theme-color" content="#FDFBF7" />
+  <link rel="canonical" href="https://theoasisfuengirola.com/smoothies-zumos-fuengirola/" />
+  <link rel="icon" type="image/png" href="../logo.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="The Oasis" />
+  <meta property="og:title" content="Smoothies y Zumos Naturales en Fuengirola | The Oasis" />
+  <meta property="og:description" content="Fruta fresca batida al momento, zumos prensados en frío y el clásico Batido Oasis. Sin azúcares añadidos." />
+  <meta property="og:image" content="https://theoasisfuengirola.com/logo.png" />
+  <meta property="og:url" content="https://theoasisfuengirola.com/smoothies-zumos-fuengirola/" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Datos estructurados: negocio local + migas de pan + FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Restaurant",
+        "name": "The Oasis",
+        "image": "https://theoasisfuengirola.com/logo.png",
+        "servesCuisine": ["Smoothies", "Juices", "Healthy"],
+        "priceRange": "€",
+        "telephone": "+34602382912",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Avenida Ramón y Cajal, 30",
+          "addressLocality": "Fuengirola",
+          "addressRegion": "Málaga",
+          "postalCode": "29640",
+          "addressCountry": "ES"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 36.5397, "longitude": -4.6249 },
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "12:00", "closes": "23:00"
+        }],
+        "url": "https://theoasisfuengirola.com/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://theoasisfuengirola.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Smoothies y Zumos Fuengirola", "item": "https://theoasisfuengirola.com/smoothies-zumos-fuengirola/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Los smoothies llevan azúcar añadido?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Todos nuestros smoothies y zumos se hacen solo con fruta fresca, sin azúcares añadidos, sin siropes y sin concentrados. El dulzor es el de la propia fruta." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué es el Batido Oasis?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Es el clásico de la casa: aguacate, dátiles y almendra batidos con bebida de almendras. Cremoso, saciante y energético — el favorito de nuestros clientes de siempre. Desde 4,70 €." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Tenéis bebidas vegetales?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sí: bebida de almendras, avena y soja, sin coste extra. Elige la tuya al pedir cualquier smoothie o batido." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Hacéis zumo de naranja recién exprimido en Fuengirola?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sí, exprimimos la naranja al momento delante de ti, desde 2,90 €. También preparamos zumos prensados en frío como el Detox Antiox de remolacha, zanahoria, manzana y jengibre." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            crema: '#FDFBF7', arena: '#F3EDE2', cacao: '#3E2723',
+            cacaoL: '#6D4C41', acai: '#4A154B', acaiL: '#5C2C5D', piedra: '#9B9184'
+          },
+          fontFamily: { display: ['Poppins','sans-serif'], body: ['Inter','sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease-out, transform .7s ease-out; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .btn { transition: transform .25s ease, background-color .25s ease, color .25s ease; }
+    .btn:hover { transform: translateY(-2px) scale(1.03); }
+    .btn:active { transform: scale(.97); }
+    .dots { flex: 1; margin: 0 .6rem; border-bottom: 2px dotted rgba(62,39,35,.25); transform: translateY(-4px); }
+    .size-pill {
+      display: inline-flex; align-items: baseline; gap: .35rem;
+      background: #fff; border: 1px solid rgba(62,39,35,.12); border-radius: 9999px;
+      padding: .45rem .85rem; font-size: .82rem; font-weight: 600; color: #3E2723;
+    }
+    .size-pill b { color: #4A154B; font-family: Poppins, sans-serif; }
+    .size-pill-light { background: rgba(255,255,255,.13); border-color: rgba(255,255,255,.28); color: #fff; }
+    .size-pill-light b { color: #fff; }
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] .faq-arrow { transform: rotate(180deg); }
+    .faq-arrow { transition: transform .3s ease; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+  </style>
+</head>
+
+<body class="bg-crema text-cacao font-body antialiased">
+
+  <!-- ══ NAVBAR ══ -->
+  <header class="sticky top-0 z-50 bg-crema/90 backdrop-blur-md shadow-sm">
+    <nav class="max-w-5xl mx-auto flex items-center justify-between gap-3 px-4 sm:px-6 h-[68px]" aria-label="Navegación">
+      <a href="../" class="flex items-center gap-2.5">
+        <img src="../logo.png" alt="The Oasis Fuengirola" class="h-10 w-10 rounded-full object-cover" width="40" height="40" />
+        <span class="font-display font-bold text-lg">The Oasis</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-6 font-medium text-sm">
+        <li><a href="../" class="hover:text-acai transition-colors">Inicio</a></li>
+        <li><a href="../acai-bowls-fuengirola/" class="hover:text-acai transition-colors">Açaí Bowls</a></li>
+        <li><span class="text-acai font-semibold" aria-current="page">Smoothies y Zumos</span></li>
+        <li><a href="../crepes-gofres-fuengirola/" class="hover:text-acai transition-colors">Crepes y Gofres</a></li>
+      </ul>
+      <a href="https://wa.me/34602382912?text=Hola%20The%20Oasis!%20Quiero%20pedir%20un%20smoothie%20para%20recoger."
+         target="_blank" rel="noopener"
+         class="btn inline-flex items-center gap-2 bg-acai hover:bg-acaiL text-white font-display font-semibold text-sm px-4 sm:px-5 py-2.5 rounded-full shadow-md shadow-acai/25">
+        Pedir por WhatsApp
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ══ HERO ══ -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-10">
+      <nav aria-label="Migas de pan" class="text-xs text-piedra mb-4">
+        <a href="../" class="hover:text-acai">Inicio</a> <span aria-hidden="true">›</span> <span>Smoothies y Zumos Fuengirola</span>
+      </nav>
+      <h1 class="reveal visible font-display font-extrabold text-3xl sm:text-5xl leading-tight tracking-tight max-w-2xl">
+        Smoothies y zumos naturales en <span class="text-acai">Fuengirola</span>
+      </h1>
+      <p class="reveal visible mt-5 text-cacaoL max-w-2xl text-base sm:text-lg">
+        Fruta fresca batida al momento, zumo de naranja recién exprimido y prensados en frío,
+        <strong>sin azúcares añadidos</strong> y desde <strong>2,90 €</strong>. Y el favorito de
+        siempre: el <strong>Batido Oasis</strong> de aguacate, dátiles y almendra. Para llevar en
+        Avenida Ramón y Cajal 30, en pleno centro de Fuengirola.
+      </p>
+      <div class="reveal visible mt-7 flex flex-col sm:flex-row gap-3.5">
+        <a href="https://wa.me/34602382912?text=Hola%20The%20Oasis!%20Quiero%20pedir%20un%20smoothie%20para%20recoger."
+           target="_blank" rel="noopener"
+           class="btn inline-flex items-center justify-center bg-acai hover:bg-acaiL text-white font-display font-semibold px-8 py-4 rounded-full shadow-lg shadow-acai/30 min-h-[52px]">
+          Pedir para recoger
+        </a>
+        <a href="../#menu"
+           class="btn inline-flex items-center justify-center border-2 border-cacao text-cacao hover:bg-cacao hover:text-crema font-display font-semibold px-8 py-4 rounded-full min-h-[52px]">
+          Ver carta completa
+        </a>
+      </div>
+    </section>
+
+    <!-- ══ LISTA DE SMOOTHIES Y ZUMOS ══ -->
+    <section class="bg-arena/60 py-12 sm:py-16" aria-label="Nuestros smoothies y zumos">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 space-y-7">
+        <h2 class="reveal font-display font-bold text-2xl sm:text-3xl text-center mb-8">La carta líquida, de más ligero a más completo</h2>
+
+        <article class="reveal">
+          <div class="flex items-baseline">
+            <h3 class="font-display font-semibold text-lg">Zumo de Naranja Natural</h3><span class="dots"></span>
+            <span class="text-sm text-piedra font-medium whitespace-nowrap">desde 2,90 €</span>
+          </div>
+          <p class="mt-1.5 text-sm text-piedra">100% naranja, exprimido al momento</p>
+          <div class="mt-2.5 flex flex-wrap gap-2"><span class="size-pill"><b>S</b> 2,90 €</span><span class="size-pill"><b>M</b> 3,90 €</span><span class="size-pill"><b>L</b> 4,90 €</span></div>
+        </article>
+
+        <article class="reveal">
+          <div class="flex items-baseline">
+            <h3 class="font-display font-semibold text-lg">Detox Antiox</h3><span class="dots"></span>
+            <span class="text-sm text-piedra font-medium whitespace-nowrap">desde 3,50 €</span>
+          </div>
+          <p class="mt-1.5 text-sm text-piedra">Remolacha, zanahoria, manzana y jengibre — prensado en frío</p>
+          <div class="mt-2.5 flex flex-wrap gap-2"><span class="size-pill"><b>S</b> 3,50 €</span><span class="size-pill"><b>M</b> 4,50 €</span><span class="size-pill"><b>L</b> 5,50 €</span></div>
+        </article>
+
+        <article class="reveal">
+          <div class="flex items-baseline">
+            <h3 class="font-display font-semibold text-lg">Berry Boost</h3><span class="dots"></span>
+            <span class="text-sm text-piedra font-medium whitespace-nowrap">desde 3,90 €</span>
+          </div>
+          <p class="mt-1.5 text-sm text-piedra">Frutos rojos, plátano y bebida de almendras</p>
+          <div class="mt-2.5 flex flex-wrap gap-2"><span class="size-pill"><b>S</b> 3,90 €</span><span class="size-pill"><b>M</b> 4,90 €</span><span class="size-pill"><b>L</b> 5,90 €</span></div>
+        </article>
+
+        <article class="reveal">
+          <div class="flex items-baseline">
+            <h3 class="font-display font-semibold text-lg">Sunset Fuengirola</h3><span class="dots"></span>
+            <span class="text-sm text-piedra font-medium whitespace-nowrap">desde 4,20 €</span>
+          </div>
+          <p class="mt-1.5 text-sm text-piedra">Mango, fresa, naranja y plátano</p>
+          <div class="mt-2.5 flex flex-wrap gap-2"><span class="size-pill"><b>S</b> 4,20 €</span><span class="size-pill"><b>M</b> 5,20 €</span><span class="size-pill"><b>L</b> 6,20 €</span></div>
+        </article>
+
+        <article class="reveal">
+          <div class="flex items-baseline">
+            <h3 class="font-display font-semibold text-lg">Verde Vital</h3><span class="dots"></span>
+            <span class="text-sm text-piedra font-medium whitespace-nowrap">desde 4,50 €</span>
+          </div>
+          <p class="mt-1.5 text-sm text-piedra">Espinaca, manzana verde, apio, jengibre y limón</p>
+          <div class="mt-2.5 flex flex-wrap gap-2"><span class="size-pill"><b>S</b> 4,50 €</span><span class="size-pill"><b>M</b> 5,50 €</span><span class="size-pill"><b>L</b> 6,50 €</span></div>
+        </article>
+
+        <article class="reveal relative bg-gradient-to-br from-cacao to-cacaoL text-white rounded-3xl p-6 sm:p-7 shadow-xl shadow-cacao/25">
+          <span class="absolute -top-3 left-6 bg-crema text-cacao text-xs font-bold px-3.5 py-1.5 rounded-full shadow">EL CLÁSICO</span>
+          <div class="flex items-baseline">
+            <h3 class="font-display font-bold text-xl">Batido Oasis</h3><span class="dots !border-white/30"></span>
+            <span class="text-sm text-white/70 font-medium whitespace-nowrap">desde 4,70 €</span>
+          </div>
+          <p class="mt-2 text-sm text-white/75">Aguacate, dátiles, almendra y bebida de almendras — el que enamoraba a todos</p>
+          <div class="mt-3 flex flex-wrap gap-2"><span class="size-pill size-pill-light"><b>S</b> 4,70 €</span><span class="size-pill size-pill-light"><b>M</b> 5,70 €</span><span class="size-pill size-pill-light"><b>L</b> 6,70 €</span></div>
+        </article>
+
+        <article class="reveal">
+          <div class="flex items-baseline">
+            <h3 class="font-display font-semibold text-lg">Protein Shake Oasis</h3><span class="dots"></span>
+            <span class="text-sm text-piedra font-medium whitespace-nowrap">desde 4,90 €</span>
+          </div>
+          <p class="mt-1.5 text-sm text-piedra">Whey, plátano, avena, cacao y bebida vegetal a elegir</p>
+          <div class="mt-2.5 flex flex-wrap gap-2"><span class="size-pill"><b>S</b> 4,90 €</span><span class="size-pill"><b>M</b> 5,90 €</span><span class="size-pill"><b>L</b> 6,90 €</span></div>
+        </article>
+
+        <p class="text-center text-xs text-piedra pt-1">Sin azúcares añadidos · Bebidas vegetales sin coste extra</p>
+      </div>
+    </section>
+
+    <!-- ══ CONTENIDO SEO ══ -->
+    <section class="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-10">
+      <div class="reveal">
+        <h2 class="font-display font-bold text-2xl mb-3">Solo fruta, nada más</h2>
+        <p class="text-cacaoL leading-relaxed">
+          Ningún smoothie de The Oasis lleva azúcar añadido, siropes ni concentrados: el dulzor es
+          el de la fruta que exprimimos y batimos delante de ti. Los prensados en frío, como el
+          Detox Antiox, conservan las vitaminas y el color intacto porque nunca se calientan durante
+          la preparación.
+        </p>
+      </div>
+      <div class="reveal">
+        <h2 class="font-display font-bold text-2xl mb-3">El Batido Oasis: nuestro clásico</h2>
+        <p class="text-cacaoL leading-relaxed">
+          Aguacate cremoso, dátiles Medjool y almendra: la combinación que nuestros clientes de
+          siempre nos pedían una y otra vez. Es saciante, energético y perfecto tanto de desayuno
+          tardío como de recarga antes del gimnasio. Si vienes por primera vez, empieza por aquí.
+        </p>
+      </div>
+
+      <!-- FAQ visible (coincide con el JSON-LD FAQPage) -->
+      <div class="reveal">
+        <h2 class="font-display font-bold text-2xl mb-5">Preguntas frecuentes</h2>
+        <div class="space-y-3">
+          <details class="bg-white rounded-2xl px-5 py-4 shadow-sm">
+            <summary class="flex items-center justify-between font-display font-semibold">
+              ¿Los smoothies llevan azúcar añadido?
+              <svg class="faq-arrow w-4 h-4 shrink-0 ml-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 text-sm text-cacaoL">No. Solo fruta fresca, sin azúcares añadidos, sin siropes y sin concentrados.</p>
+          </details>
+          <details class="bg-white rounded-2xl px-5 py-4 shadow-sm">
+            <summary class="flex items-center justify-between font-display font-semibold">
+              ¿Qué es el Batido Oasis?
+              <svg class="faq-arrow w-4 h-4 shrink-0 ml-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 text-sm text-cacaoL">El clásico de la casa: aguacate, dátiles y almendra con bebida de almendras. Cremoso, saciante y energético. Desde 4,70 €.</p>
+          </details>
+          <details class="bg-white rounded-2xl px-5 py-4 shadow-sm">
+            <summary class="flex items-center justify-between font-display font-semibold">
+              ¿Tenéis bebidas vegetales?
+              <svg class="faq-arrow w-4 h-4 shrink-0 ml-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 text-sm text-cacaoL">Sí: almendras, avena y soja, sin coste extra. Elige la tuya al pedir.</p>
+          </details>
+          <details class="bg-white rounded-2xl px-5 py-4 shadow-sm">
+            <summary class="flex items-center justify-between font-display font-semibold">
+              ¿Hacéis zumo de naranja recién exprimido?
+              <svg class="faq-arrow w-4 h-4 shrink-0 ml-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <p class="mt-3 text-sm text-cacaoL">Sí, exprimido al momento delante de ti, desde 2,90 €. También prensados en frío como el Detox Antiox.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ UBICACIÓN COMPACTA ══ -->
+    <section class="bg-cacao text-crema py-12" aria-label="Ubicación">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="font-display font-bold text-2xl mb-3">Recógelo en el centro de Fuengirola</h2>
+        <address class="not-italic text-arena/80">Avenida Ramón y Cajal, 30 · 29640 Fuengirola, Málaga<br />Lunes a Sábado · 12:00 – 23:00</address>
+        <a href="https://maps.google.com/?q=The+Oasis,+Avenida+Ram%C3%B3n+y+Cajal+30,+29640+Fuengirola" target="_blank" rel="noopener"
+           class="btn mt-6 inline-flex items-center justify-center bg-crema text-cacao hover:bg-arena font-display font-semibold px-8 py-4 rounded-full min-h-[52px]">
+          Cómo llegar
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="bg-cacao border-t border-crema/10 text-arena/70 py-8 text-sm">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col items-center gap-3">
+      <nav class="flex flex-wrap justify-center gap-x-5 gap-y-2" aria-label="Enlaces">
+        <a href="../" class="hover:text-crema transition-colors">Inicio</a>
+        <a href="../acai-bowls-fuengirola/" class="hover:text-crema transition-colors">Açaí Bowls</a>
+        <a href="../crepes-gofres-fuengirola/" class="hover:text-crema transition-colors">Crepes y Gofres</a>
+        <a href="../en/" class="hover:text-crema transition-colors">English</a>
+      </nav>
+      <p class="text-xs text-arena/40">© 2026 The Oasis Fuengirola</p>
+    </div>
+  </footer>
+
+  <script>
+    /* Fade-in al hacer scroll */
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

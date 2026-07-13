@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ══ SEO: English landing — tourist searches "acai bowl fuengirola", "healthy food fuengirola" ══ -->
+  <title>Açaí Bowls, Smoothies &amp; Healthy Food in Fuengirola | The Oasis</title>
+  <meta name="description" content="The Oasis — premium açaí bowls, fresh smoothies, cold-pressed juices and artisan crepes to go in Fuengirola, Costa del Sol. From €2.90. Av. Ramón y Cajal 30, near the beach. Order for pickup on WhatsApp." />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="ES-MA" />
+  <meta name="geo.placename" content="Fuengirola, Málaga" />
+  <meta name="theme-color" content="#FDFBF7" />
+  <link rel="canonical" href="https://theoasisfuengirola.com/en/" />
+  <link rel="alternate" hreflang="es" href="https://theoasisfuengirola.com/" />
+  <link rel="alternate" hreflang="en" href="https://theoasisfuengirola.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://theoasisfuengirola.com/" />
+  <link rel="icon" type="image/png" href="../logo.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:site_name" content="The Oasis" />
+  <meta property="og:title" content="Açaí Bowls, Smoothies &amp; Healthy Food in Fuengirola | The Oasis" />
+  <meta property="og:description" content="Premium açaí bowls, fresh smoothies and artisan treats to go in the heart of Costa del Sol." />
+  <meta property="og:image" content="https://theoasisfuengirola.com/logo.png" />
+  <meta property="og:url" content="https://theoasisfuengirola.com/en/" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Structured data: local business + FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Restaurant",
+        "name": "The Oasis",
+        "image": "https://theoasisfuengirola.com/logo.png",
+        "servesCuisine": ["Açaí Bowls", "Smoothies", "Juices", "Crepes", "Healthy"],
+        "priceRange": "€",
+        "telephone": "+34602382912",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Avenida Ramón y Cajal, 30",
+          "addressLocality": "Fuengirola",
+          "addressRegion": "Málaga",
+          "postalCode": "29640",
+          "addressCountry": "ES"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 36.5397, "longitude": -4.6249 },
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "12:00", "closes": "23:00"
+        }],
+        "url": "https://theoasisfuengirola.com/en/"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Where can I get an açaí bowl in Fuengirola?",
+            "acceptedAnswer": { "@type": "Answer", "text": "At The Oasis, Avenida Ramón y Cajal 30, in the centre of Fuengirola — a short walk from the beach promenade. Açaí bowls come in 4 sizes from €5.50, made to order with fresh fruit." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you have vegan and gluten-free options?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our açaí bowls, smoothies and juices are naturally gluten-free and can be made fully vegan. Crepes and waffles contain wheat flour. Plant milks (almond, oat, soy) at no extra cost." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I order for pickup?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes — message us on WhatsApp at +34 602 38 29 12 and we'll have it ready when you arrive. Open Monday to Saturday, 12:00 to 23:00." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            crema: '#FDFBF7', arena: '#F3EDE2', cacao: '#3E2723',
+            cacaoL: '#6D4C41', acai: '#4A154B', acaiL: '#5C2C5D', piedra: '#9B9184'
+          },
+          fontFamily: { display: ['Poppins','sans-serif'], body: ['Inter','sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease-out, transform .7s ease-out; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .btn { transition: transform .25s ease, background-color .25s ease, color .25s ease; }
+    .btn:hover { transform: translateY(-2px) scale(1.03); }
+    .btn:active { transform: scale(.97); }
+    .dots { flex: 1; margin: 0 .6rem; border-bottom: 2px dotted rgba(62,39,35,.25); transform: translateY(-4px); }
+    .size-pill {
+      display: inline-flex; align-items: baseline; gap: .35rem;
+      background: #fff; border: 1px solid rgba(62,39,35,.12); border-radius: 9999px;
+      padding: .45rem .85rem; font-size: .82rem; font-weight: 600; color: #3E2723;
+    }
+    .size-pill b { color: #4A154B; font-family: Poppins, sans-serif; }
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] .faq-arrow { transform: rotate(180deg); }
+    .faq-arrow { transition: transform .3s ease; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+  </style>
+</head>
+
+<body class="bg-crema text-cacao font-body antialiased">
+
+  <!-- ══ NAVBAR ══ -->
+  <header class="sticky top-0 z-50 bg-crema/90 backdrop-blur-md shadow-sm">
+    <nav class="max-w-5xl mx-auto flex items-center justify-between gap-3 px-4 sm:px-6 h-[68px]" aria-label="Navigation">
+      <a href="./" class="flex items-center gap-2.5">
+        <img src="../logo.png" alt="The Oasis Fuengirola" class="h-10 w-10 rounded-full object-cover" width="40" height="40" />
+        <span class="font-display font-bold text-lg">The Oasis</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-6 font-medium text-sm">
+        <li><a href="#menu" class="hover:text-acai transition-colors">Menu</a></li>
+        <li><a href="#location" class="hover:text-acai transition-colors">Location</a></li>
+        <li><a href="../" class="hover:text-acai transition-colors" hreflang="es">Español</a></li>
+      </ul>
+      <a href="https://wa.me/34602382912?text=Hi%20The%20Oasis!%20I%27d%20like%20to%20order%20for%20pickup."
+         target="_blank" rel="noopener"
+         class="btn inline-flex items-center gap-2 bg-acai hover:bg-acaiL text-white font-display font-semibold text-sm px-4 sm:px-5 py-2.5 rounded-full shadow-md shadow-acai/25">
+        Order on WhatsApp
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ══ HERO ══ -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-10">
+      <h1 class="reveal visible font-display font-extrabold text-3xl sm:text-5xl leading-tight tracking-tight max-w-2xl">
+        Açaí bowls, smoothies &amp; healthy food to go in <span class="text-acai">Fuengirola</span>
+      </h1>
+      <p class="reveal visible mt-5 text-cacaoL max-w-2xl text-base sm:text-lg">
+        The Oasis is your freshness stop on the Costa del Sol: premium açaí bowls topped with fresh
+        fruit, smoothies and cold-pressed juices with <strong>no added sugar</strong>, and artisan
+        crepes and Belgian waffles. Everything made to order and packed to go — perfect for the
+        beach, after the gym or a stroll through town. Find us at
+        <strong>Avenida Ramón y Cajal 30</strong>, in the centre of Fuengirola.
+      </p>
+      <div class="reveal visible mt-7 flex flex-col sm:flex-row gap-3.5">
+        <a href="https://wa.me/34602382912?text=Hi%20The%20Oasis!%20I%27d%20like%20to%20order%20for%20pickup."
+           target="_blank" rel="noopener"
+           class="btn inline-flex items-center justify-center bg-acai hover:bg-acaiL text-white font-display font-semibold px-8 py-4 rounded-full shadow-lg shadow-acai/30 min-h-[52px]">
+          Order for pickup
+        </a>
+        <a href="https://maps.google.com/?q=The+Oasis,+Avenida+Ram%C3%B3n+y+Cajal+30,+29640+Fuengirola" target="_blank" rel="noopener"
+           class="btn inline-flex items-center justify-center border-2 border-cacao text-cacao hover:bg-cacao hover:text-crema font-display font-semibold px-8 py-4 rounded-full min-h-[52px]">
+          Get directions
+        </a>
+      </div>
+    </section>
+
+    <!-- ══ MENU HIGHLIGHTS ══ -->
+    <section id="menu" class="bg-arena/60 py-12 sm:py-16" aria-label="Menu highlights">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <h2 class="reveal font-display font-bold text-2xl sm:text-3xl text-center mb-10">Our menu at a glance</h2>
+
+        <div class="space-y-10">
+          <!-- Bowls -->
+          <div class="reveal">
+            <h3 class="font-display font-bold text-xl text-acai mb-4">Açaí &amp; Fruit Bowls <span class="text-sm font-medium text-piedra">· 4 sizes, from €5.50</span></h3>
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-baseline"><span class="font-semibold font-display">Açaí Oasis Supreme — best seller</span><span class="dots"></span><span class="whitespace-nowrap font-display font-bold">from €6.90</span></li>
+              <li class="text-piedra">Premium açaí, artisan granola, strawberry, banana, toasted coconut &amp; peanut butter</li>
+              <li class="flex items-baseline"><span class="font-semibold font-display">Protein Power</span><span class="dots"></span><span class="whitespace-nowrap font-display font-bold">from €7.50</span></li>
+              <li class="text-piedra">Açaí, whey protein, banana, cacao nibs, peanut butter &amp; granola</li>
+              <li class="flex items-baseline"><span class="font-semibold font-display">Coco Zen, Tropical Escape, Green Recovery, Dragon Sunrise</span><span class="dots"></span><span class="whitespace-nowrap font-display font-bold">from €5.50</span></li>
+            </ul>
+          </div>
+
+          <!-- Smoothies -->
+          <div class="reveal">
+            <h3 class="font-display font-bold text-xl text-acai mb-4">Smoothies &amp; Juices <span class="text-sm font-medium text-piedra">· 3 sizes, from €2.90</span></h3>
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-baseline"><span class="font-semibold font-display">Fresh orange juice, squeezed to order</span><span class="dots"></span><span class="whitespace-nowrap font-display font-bold">from €2.90</span></li>
+              <li class="flex items-baseline"><span class="font-semibold font-display">Batido Oasis — the house classic</span><span class="dots"></span><span class="whitespace-nowrap font-display font-bold">from €4.70</span></li>
+              <li class="text-piedra">Avocado, dates &amp; almond — creamy, filling and energising</li>
+              <li class="flex items-baseline"><span class="font-semibold font-display">Detox Antiox, Berry Boost, Sunset Fuengirola, Verde Vital, Protein Shake</span><span class="dots"></span><span class="whitespace-nowrap font-display font-bold">from €3.50</span></li>
+            </ul>
+          </div>
+
+          <!-- Crepes -->
+          <div class="reveal">
+            <h3 class="font-display font-bold text-xl text-acai mb-4">Crepes &amp; Waffles <span class="text-sm font-medium text-piedra">· from €4.50</span></h3>
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-baseline"><span class="font-semibold font-display">Classic Belgian Waffle</span><span class="dots"></span><span class="whitespace-nowrap font-display font-bold">€4.50</span></li>
+              <li class="flex items-baseline"><span class="font-semibold font-display">Nutella &amp; Strawberry Crepe</span><span class="dots"></span><span class="whitespace-nowrap font-display font-bold">€4.90</span></li>
+              <li class="flex items-baseline"><span class="font-semibold font-display">Savoury Fit Crepe (turkey, avocado, arugula)</span><span class="dots"></span><span class="whitespace-nowrap font-display font-bold">€5.50</span></li>
+              <li class="flex items-baseline"><span class="font-semibold font-display">Açaí Crunch Waffle</span><span class="dots"></span><span class="whitespace-nowrap font-display font-bold">€6.50</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="reveal mt-10 text-center">
+          <a href="https://wa.me/34602382912?text=Hi%20The%20Oasis!%20I%27d%20like%20to%20order%20for%20pickup."
+             target="_blank" rel="noopener"
+             class="btn inline-flex items-center justify-center bg-cacao hover:bg-acai text-crema font-display font-semibold px-8 py-4 rounded-full shadow-lg min-h-[52px]">
+            Order now on WhatsApp
+          </a>
+          <p class="mt-3 text-xs text-piedra">Made fresh — we'll message you when it's ready to collect.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ FAQ ══ -->
+    <section class="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <h2 class="reveal font-display font-bold text-2xl mb-5">Frequently asked questions</h2>
+      <div class="reveal space-y-3">
+        <details class="bg-white rounded-2xl px-5 py-4 shadow-sm">
+          <summary class="flex items-center justify-between font-display font-semibold">
+            Where can I get an açaí bowl in Fuengirola?
+            <svg class="faq-arrow w-4 h-4 shrink-0 ml-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <p class="mt-3 text-sm text-cacaoL">At The Oasis, Avenida Ramón y Cajal 30 — a short walk from the beach promenade. Bowls come in 4 sizes from €5.50, made to order with fresh fruit.</p>
+        </details>
+        <details class="bg-white rounded-2xl px-5 py-4 shadow-sm">
+          <summary class="flex items-center justify-between font-display font-semibold">
+            Do you have vegan and gluten-free options?
+            <svg class="faq-arrow w-4 h-4 shrink-0 ml-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <p class="mt-3 text-sm text-cacaoL">Yes. Bowls, smoothies and juices are naturally gluten-free and can be made fully vegan. Crepes and waffles contain wheat flour. Plant milks at no extra cost.</p>
+        </details>
+        <details class="bg-white rounded-2xl px-5 py-4 shadow-sm">
+          <summary class="flex items-center justify-between font-display font-semibold">
+            Can I order for pickup?
+            <svg class="faq-arrow w-4 h-4 shrink-0 ml-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <p class="mt-3 text-sm text-cacaoL">Yes — message us on WhatsApp at +34 602 38 29 12 and it'll be ready when you arrive. Open Monday to Saturday, 12:00–23:00.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ══ LOCATION ══ -->
+    <section id="location" class="bg-cacao text-crema py-12" aria-label="Location">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="font-display font-bold text-2xl mb-3">Find us in the centre of Fuengirola</h2>
+        <address class="not-italic text-arena/80">Avenida Ramón y Cajal, 30 · 29640 Fuengirola, Málaga<br />Monday to Saturday · 12:00 – 23:00 · Closed Sundays</address>
+        <a href="https://maps.google.com/?q=The+Oasis,+Avenida+Ram%C3%B3n+y+Cajal+30,+29640+Fuengirola" target="_blank" rel="noopener"
+           class="btn mt-6 inline-flex items-center justify-center bg-crema text-cacao hover:bg-arena font-display font-semibold px-8 py-4 rounded-full min-h-[52px]">
+          Open in Google Maps
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="bg-cacao border-t border-crema/10 text-arena/70 py-8 text-sm">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col items-center gap-3">
+      <nav class="flex flex-wrap justify-center gap-x-5 gap-y-2" aria-label="Links">
+        <a href="../" class="hover:text-crema transition-colors" hreflang="es">Página en español</a>
+        <a href="https://www.instagram.com/theoasisfuengirola" target="_blank" rel="noopener" class="hover:text-crema transition-colors">Instagram</a>
+        <a href="https://www.tiktok.com/@theoasisfuengirola" target="_blank" rel="noopener" class="hover:text-crema transition-colors">TikTok</a>
+      </nav>
+      <p class="text-xs text-arena/40">© 2026 The Oasis Fuengirola</p>
+    </div>
+  </footer>
+
+  <script>
+    /* Fade-in on scroll */
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
