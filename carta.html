@@ -50,7 +50,7 @@
   <style>
     /* ── Escala global: 1rem crece con el ancho del televisor ──
        En un 50" Full HD ≈ 19px · En 4K ≈ el doble → mismo diseño. */
-    html { font-size: clamp(11px, 1vw, 40px); }
+    html { font-size: clamp(10px, .95vw, 38px); }
 
     body {
       cursor: none;               /* Ocultar el ratón en el televisor */
@@ -298,12 +298,12 @@
     <div class="spark" style="left:84%; animation-delay:1.8s;"></div>
   </div>
 
-  <div class="relative z-10 h-full flex flex-col px-[3vw] py-[2.2vh]">
+  <div class="relative z-10 h-full flex flex-col px-[3vw] py-[1.8vh]">
 
     <!-- ══════════════ CABECERA ══════════════ -->
-    <header class="flex items-center justify-between pb-[1.8vh] border-b-2 border-cacao/10">
+    <header class="flex items-center justify-between pb-[1.2vh] border-b-2 border-cacao/10">
       <div class="flex items-center gap-[1vw]">
-        <img src="logo.png" alt="The Oasis" class="h-[7.5vh] w-[7.5vh] rounded-full object-cover" />
+        <img src="logo.png" alt="The Oasis" class="h-[6.5vh] w-[6.5vh] rounded-full object-cover" />
         <div>
           <h1 class="font-display font-extrabold text-[2.1rem] leading-none tracking-tight">The Oasis</h1>
           <p class="text-[.95rem] text-cacaoL mt-[.4vh]">Healthy takeaway · Fuengirola</p>
@@ -325,7 +325,7 @@
 
     <!-- ══════════════ CARTA EN 3 COLUMNAS ══════════════
          Precios en euros · ítems de más barato a más caro -->
-    <main class="flex-1 grid grid-cols-3 gap-[2vw] pt-[2vh] min-h-0">
+    <main class="flex-1 grid grid-cols-3 gap-[2.4vw] pt-[1.6vh] min-h-0">
 
       <!-- ─── COLUMNA 1 · AÇAÍ & FRUIT BOWLS ─── -->
       <section class="col-in col-in-1 flex flex-col min-h-0" aria-label="Açaí y Fruit Bowls">
@@ -340,7 +340,7 @@
           <span class="price-cell">M</span><span class="price-cell">L</span>
         </div>
 
-        <div class="flex-1 flex flex-col justify-evenly min-h-0">
+        <div class="flex-1 flex flex-col justify-evenly gap-[1.1vh] min-h-0">
 
           <article class="item-in" style="animation-delay:.55s">
             <div class="row-2">
@@ -431,7 +431,7 @@
           <span class="price-cell">M</span><span class="price-cell">L</span>
         </div>
 
-        <div class="flex-1 flex flex-col justify-evenly min-h-0">
+        <div class="flex-1 flex flex-col justify-evenly gap-[1.1vh] min-h-0">
 
           <article class="item-in" style="animation-delay:.75s">
             <div class="row-2">
@@ -516,7 +516,7 @@
           Crepes
         </h2>
 
-        <div class="flex-1 flex flex-col justify-evenly min-h-0">
+        <div class="flex-1 flex flex-col justify-evenly gap-[1.1vh] min-h-0">
 
           <article class="item-in" style="animation-delay:.95s">
             <div class="flex items-baseline">
@@ -603,7 +603,7 @@
     </main>
 
     <!-- ══════════════ PIE: mensajes rotatorios bilingües ══════════════ -->
-    <footer class="pt-[1.4vh] mt-[.8vh] border-t-2 border-cacao/10 text-center relative h-[4.4vh]">
+    <footer class="pt-[1vh] mt-[.6vh] border-t-2 border-cacao/10 text-center relative h-[3.8vh]">
       <p class="ticker-msg absolute inset-0 flex items-center justify-center font-display font-medium text-[1rem] text-cacaoL">
         Fruta fresca seleccionada cada mañana&nbsp;<span class="text-piedra">· Fresh fruit picked every morning</span>
       </p>
