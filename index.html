@@ -371,8 +371,8 @@
             <span class="lang-en">Freshness made to go</span>
           </h2>
           <p class="mt-3 text-cacaoL">
-            <span class="lang-es">Elige tu categoría y tu tamaño: S, M, L o XL.</span>
-            <span class="lang-en">Pick your category and your size: S, M, L or XL.</span>
+            <span class="lang-es">Elige tu categoría y tu tamaño: M o L. O móntalo a tu gusto con la fruta fresca de la vitrina.</span>
+            <span class="lang-en">Pick your category and your size: M or L. Or build your own with the fresh fruit on display.</span>
           </p>
         </header>
 
@@ -392,27 +392,42 @@
             </button>
             <button role="tab" id="tab-crepes" aria-selected="false" aria-controls="panel-crepes" data-tab="crepes"
                     class="tab-btn btn inline-flex items-center gap-1.5 font-display font-semibold text-sm px-4 sm:px-5 py-3 rounded-full min-h-[46px] text-cacaoL">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3.5"/><path d="M9.3 4v16M14.7 4v16M4 9.3h16M4 14.7h16"/></svg>
-              <span class="lang-es">Crepes &amp; Gofres</span><span class="lang-en">Crepes &amp; Waffles</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20A16 16 0 0 1 20 4v16H4z"/><path d="M12.5 20a7.5 7.5 0 0 1 7.5-7.5"/></svg>
+              Crepes
             </button>
           </div>
         </div>
 
-        <!-- ── Panel 1: Açaí & Fruit Bowls (de más barato a más caro) ── -->
+        <!-- ── Panel 1: Açaí & Fruit Bowls (de más barato a más caro · tamaños M y L) ── -->
         <div role="tabpanel" id="panel-bowls" aria-labelledby="tab-bowls" data-panel="bowls" class="tab-panel space-y-7">
+
+          <article class="menu-item">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-lg">Watermelon Chill</h3>
+              <span class="dots"></span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 5,50 €</span>
+            </div>
+            <p class="mt-1.5 text-sm text-piedra">
+              <span class="lang-es">Sandía congelada batida tipo sorbete, miel de Málaga, fruta fresca y coco rallado — el refresco del verano</span>
+              <span class="lang-en">Frozen watermelon blended sorbet-style, Málaga honey, fresh fruit and shredded coconut — this summer's refresher</span>
+            </p>
+            <div class="mt-2.5 flex flex-wrap gap-2">
+              <span class="size-pill"><b>M</b> 5,50 €</span><span class="size-pill"><b>L</b> 6,50 €</span>
+            </div>
+          </article>
 
           <article class="menu-item">
             <div class="flex items-baseline">
               <h3 class="font-display font-semibold text-lg">Coco Zen</h3>
               <span class="dots"></span>
-              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 5,50 €</span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 5,90 €</span>
             </div>
             <p class="mt-1.5 text-sm text-piedra">
               <span class="lang-es">Yogur de coco, frutos rojos, miel de Málaga y granola artesanal</span>
               <span class="lang-en">Coconut yogurt, red berries, Málaga honey and artisan granola</span>
             </p>
             <div class="mt-2.5 flex flex-wrap gap-2">
-              <span class="size-pill"><b>S</b> 5,50 €</span><span class="size-pill"><b>M</b> 6,90 €</span><span class="size-pill"><b>L</b> 8,20 €</span><span class="size-pill"><b>XL</b> 9,50 €</span>
+              <span class="size-pill"><b>M</b> 5,90 €</span><span class="size-pill"><b>L</b> 6,90 €</span>
             </div>
           </article>
 
@@ -420,14 +435,14 @@
             <div class="flex items-baseline">
               <h3 class="font-display font-semibold text-lg">Tropical Escape</h3>
               <span class="dots"></span>
-              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 5,90 €</span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 6,20 €</span>
             </div>
             <p class="mt-1.5 text-sm text-piedra">
               <span class="lang-es">Mango, piña, maracuyá, coco rallado y granola de miel</span>
               <span class="lang-en">Mango, pineapple, passion fruit, shredded coconut and honey granola</span>
             </p>
             <div class="mt-2.5 flex flex-wrap gap-2">
-              <span class="size-pill"><b>S</b> 5,90 €</span><span class="size-pill"><b>M</b> 7,20 €</span><span class="size-pill"><b>L</b> 8,50 €</span><span class="size-pill"><b>XL</b> 9,90 €</span>
+              <span class="size-pill"><b>M</b> 6,20 €</span><span class="size-pill"><b>L</b> 7,20 €</span>
             </div>
           </article>
 
@@ -435,14 +450,14 @@
             <div class="flex items-baseline">
               <h3 class="font-display font-semibold text-lg">Green Recovery</h3>
               <span class="dots"></span>
-              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 6,20 €</span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 6,50 €</span>
             </div>
             <p class="mt-1.5 text-sm text-piedra">
               <span class="lang-es">Espinaca, plátano, espirulina, kiwi, almendra laminada y granola</span>
               <span class="lang-en">Spinach, banana, spirulina, kiwi, sliced almonds and granola</span>
             </p>
             <div class="mt-2.5 flex flex-wrap gap-2">
-              <span class="size-pill"><b>S</b> 6,20 €</span><span class="size-pill"><b>M</b> 7,50 €</span><span class="size-pill"><b>L</b> 8,80 €</span><span class="size-pill"><b>XL</b> 10,20 €</span>
+              <span class="size-pill"><b>M</b> 6,50 €</span><span class="size-pill"><b>L</b> 7,50 €</span>
             </div>
           </article>
 
@@ -450,14 +465,14 @@
             <div class="flex items-baseline">
               <h3 class="font-display font-semibold text-lg">Dragon Sunrise</h3>
               <span class="dots"></span>
-              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 6,50 €</span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 6,90 €</span>
             </div>
             <p class="mt-1.5 text-sm text-piedra">
               <span class="lang-es">Pitaya (fruta del dragón), mango, kiwi, chía y granola crujiente</span>
               <span class="lang-en">Dragon fruit, mango, kiwi, chia seeds and crunchy granola</span>
             </p>
             <div class="mt-2.5 flex flex-wrap gap-2">
-              <span class="size-pill"><b>S</b> 6,50 €</span><span class="size-pill"><b>M</b> 7,90 €</span><span class="size-pill"><b>L</b> 9,20 €</span><span class="size-pill"><b>XL</b> 10,50 €</span>
+              <span class="size-pill"><b>M</b> 6,90 €</span><span class="size-pill"><b>L</b> 7,90 €</span>
             </div>
           </article>
 
@@ -470,14 +485,14 @@
             <div class="flex items-baseline">
               <h3 class="font-display font-bold text-xl">Açaí Oasis Supreme</h3>
               <span class="dots !border-white/30"></span>
-              <span class="text-sm text-white/70 font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 6,90 €</span>
+              <span class="text-sm text-white/70 font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 7,20 €</span>
             </div>
             <p class="mt-2 text-sm text-white/75">
               <span class="lang-es">Açaí premium, granola artesanal, fresa, plátano, coco tostado y crema de cacahuete</span>
               <span class="lang-en">Premium açaí, artisan granola, strawberry, banana, toasted coconut and peanut butter</span>
             </p>
             <div class="mt-3 flex flex-wrap gap-2">
-              <span class="size-pill size-pill-light"><b>S</b> 6,90 €</span><span class="size-pill size-pill-light"><b>M</b> 8,20 €</span><span class="size-pill size-pill-light"><b>L</b> 9,50 €</span><span class="size-pill size-pill-light"><b>XL</b> 10,90 €</span>
+              <span class="size-pill size-pill-light"><b>M</b> 7,20 €</span><span class="size-pill size-pill-light"><b>L</b> 8,20 €</span>
             </div>
           </article>
 
@@ -492,8 +507,28 @@
               <span class="lang-en">Açaí, whey protein, banana, cacao nibs, peanut butter and granola</span>
             </p>
             <div class="mt-2.5 flex flex-wrap gap-2">
-              <span class="size-pill"><b>S</b> 7,50 €</span><span class="size-pill"><b>M</b> 8,90 €</span><span class="size-pill"><b>L</b> 10,20 €</span><span class="size-pill"><b>XL</b> 11,50 €</span>
+              <span class="size-pill"><b>M</b> 7,50 €</span><span class="size-pill"><b>L</b> 8,90 €</span>
             </div>
+          </article>
+
+          <!-- Bowl al gusto: fruta fresca de la vitrina + toppings -->
+          <article class="border-2 border-dashed border-acai/40 bg-white/70 rounded-3xl p-6 sm:p-7">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-bold text-xl text-acai"><span class="lang-es">Bowl al Gusto</span><span class="lang-en">Build Your Own Bowl</span></h3>
+              <span class="dots"></span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 6,90 €</span>
+            </div>
+            <p class="mt-2 text-sm text-cacaoL">
+              <span class="lang-es">Elige tu base (açaí, yogur de coco o sandía), la fruta fresca de la vitrina y 2 toppings incluidos.</span>
+              <span class="lang-en">Pick your base (açaí, coconut yogurt or watermelon), fresh fruit from the display and 2 toppings included.</span>
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="size-pill"><b>M</b> 6,90 €</span><span class="size-pill"><b>L</b> 7,90 €</span>
+            </div>
+            <p class="mt-3 text-xs text-piedra">
+              <span class="lang-es">Toppings: sirope de chocolate · coco rallado · almendra · dátiles · granola · miel de Málaga · crema de cacahuete · nibs de cacao · chía — extra +0,90 €</span>
+              <span class="lang-en">Toppings: chocolate syrup · shredded coconut · almonds · dates · granola · Málaga honey · peanut butter · cacao nibs · chia — extra +€0.90</span>
+            </p>
           </article>
 
           <p class="text-center text-xs text-piedra pt-1">
@@ -502,21 +537,21 @@
           </p>
         </div>
 
-        <!-- ── Panel 2: Smoothies & Zumos (de más barato a más caro) ── -->
+        <!-- ── Panel 2: Smoothies & Zumos (de más barato a más caro · tamaños M y L) ── -->
         <div role="tabpanel" id="panel-smoothies" aria-labelledby="tab-smoothies" data-panel="smoothies" class="tab-panel space-y-7 hidden">
 
           <article class="menu-item">
             <div class="flex items-baseline">
               <h3 class="font-display font-semibold text-lg"><span class="lang-es">Zumo de Naranja Natural</span><span class="lang-en">Fresh Orange Juice</span></h3>
               <span class="dots"></span>
-              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 2,90 €</span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 3,50 €</span>
             </div>
             <p class="mt-1.5 text-sm text-piedra">
               <span class="lang-es">100% naranja, exprimido al momento</span>
               <span class="lang-en">100% orange, squeezed to order</span>
             </p>
             <div class="mt-2.5 flex flex-wrap gap-2">
-              <span class="size-pill"><b>S</b> 2,90 €</span><span class="size-pill"><b>M</b> 3,90 €</span><span class="size-pill"><b>L</b> 4,90 €</span>
+              <span class="size-pill"><b>M</b> 3,50 €</span><span class="size-pill"><b>L</b> 4,50 €</span>
             </div>
           </article>
 
@@ -524,14 +559,14 @@
             <div class="flex items-baseline">
               <h3 class="font-display font-semibold text-lg">Detox Antiox</h3>
               <span class="dots"></span>
-              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 3,50 €</span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 3,90 €</span>
             </div>
             <p class="mt-1.5 text-sm text-piedra">
               <span class="lang-es">Remolacha, zanahoria, manzana y jengibre — prensado en frío</span>
               <span class="lang-en">Beetroot, carrot, apple and ginger — cold-pressed</span>
             </p>
             <div class="mt-2.5 flex flex-wrap gap-2">
-              <span class="size-pill"><b>S</b> 3,50 €</span><span class="size-pill"><b>M</b> 4,50 €</span><span class="size-pill"><b>L</b> 5,50 €</span>
+              <span class="size-pill"><b>M</b> 3,90 €</span><span class="size-pill"><b>L</b> 4,90 €</span>
             </div>
           </article>
 
@@ -539,14 +574,14 @@
             <div class="flex items-baseline">
               <h3 class="font-display font-semibold text-lg">Berry Boost</h3>
               <span class="dots"></span>
-              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 3,90 €</span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 4,20 €</span>
             </div>
             <p class="mt-1.5 text-sm text-piedra">
               <span class="lang-es">Frutos rojos, plátano y bebida de almendras</span>
               <span class="lang-en">Red berries, banana and almond milk</span>
             </p>
             <div class="mt-2.5 flex flex-wrap gap-2">
-              <span class="size-pill"><b>S</b> 3,90 €</span><span class="size-pill"><b>M</b> 4,90 €</span><span class="size-pill"><b>L</b> 5,90 €</span>
+              <span class="size-pill"><b>M</b> 4,20 €</span><span class="size-pill"><b>L</b> 5,20 €</span>
             </div>
           </article>
 
@@ -554,14 +589,14 @@
             <div class="flex items-baseline">
               <h3 class="font-display font-semibold text-lg">Sunset Fuengirola</h3>
               <span class="dots"></span>
-              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 4,20 €</span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 4,50 €</span>
             </div>
             <p class="mt-1.5 text-sm text-piedra">
               <span class="lang-es">Mango, fresa, naranja y plátano</span>
               <span class="lang-en">Mango, strawberry, orange and banana</span>
             </p>
             <div class="mt-2.5 flex flex-wrap gap-2">
-              <span class="size-pill"><b>S</b> 4,20 €</span><span class="size-pill"><b>M</b> 5,20 €</span><span class="size-pill"><b>L</b> 6,20 €</span>
+              <span class="size-pill"><b>M</b> 4,50 €</span><span class="size-pill"><b>L</b> 5,50 €</span>
             </div>
           </article>
 
@@ -569,14 +604,14 @@
             <div class="flex items-baseline">
               <h3 class="font-display font-semibold text-lg">Verde Vital</h3>
               <span class="dots"></span>
-              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 4,50 €</span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 4,70 €</span>
             </div>
             <p class="mt-1.5 text-sm text-piedra">
               <span class="lang-es">Espinaca, manzana verde, apio, jengibre y limón</span>
               <span class="lang-en">Spinach, green apple, celery, ginger and lemon</span>
             </p>
             <div class="mt-2.5 flex flex-wrap gap-2">
-              <span class="size-pill"><b>S</b> 4,50 €</span><span class="size-pill"><b>M</b> 5,50 €</span><span class="size-pill"><b>L</b> 6,50 €</span>
+              <span class="size-pill"><b>M</b> 4,70 €</span><span class="size-pill"><b>L</b> 5,70 €</span>
             </div>
           </article>
 
@@ -589,14 +624,14 @@
             <div class="flex items-baseline">
               <h3 class="font-display font-bold text-xl">Batido Oasis</h3>
               <span class="dots !border-white/30"></span>
-              <span class="text-sm text-white/70 font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 4,70 €</span>
+              <span class="text-sm text-white/70 font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 4,90 €</span>
             </div>
             <p class="mt-2 text-sm text-white/75">
               <span class="lang-es">Aguacate, dátiles, almendra y bebida de almendras — el que enamoraba a todos</span>
               <span class="lang-en">Avocado, dates, almond and almond milk — the one everyone fell in love with</span>
             </p>
             <div class="mt-3 flex flex-wrap gap-2">
-              <span class="size-pill size-pill-light"><b>S</b> 4,70 €</span><span class="size-pill size-pill-light"><b>M</b> 5,70 €</span><span class="size-pill size-pill-light"><b>L</b> 6,70 €</span>
+              <span class="size-pill size-pill-light"><b>M</b> 4,90 €</span><span class="size-pill size-pill-light"><b>L</b> 5,90 €</span>
             </div>
           </article>
 
@@ -604,15 +639,35 @@
             <div class="flex items-baseline">
               <h3 class="font-display font-semibold text-lg">Protein Shake Oasis</h3>
               <span class="dots"></span>
-              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 4,90 €</span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 5,20 €</span>
             </div>
             <p class="mt-1.5 text-sm text-piedra">
               <span class="lang-es">Whey, plátano, avena, cacao y bebida vegetal a elegir</span>
               <span class="lang-en">Whey, banana, oats, cacao and your choice of plant milk</span>
             </p>
             <div class="mt-2.5 flex flex-wrap gap-2">
-              <span class="size-pill"><b>S</b> 4,90 €</span><span class="size-pill"><b>M</b> 5,90 €</span><span class="size-pill"><b>L</b> 6,90 €</span>
+              <span class="size-pill"><b>M</b> 5,20 €</span><span class="size-pill"><b>L</b> 6,20 €</span>
             </div>
+          </article>
+
+          <!-- Smoothie al gusto: fruta fresca de la vitrina -->
+          <article class="border-2 border-dashed border-acai/40 bg-white/70 rounded-3xl p-6 sm:p-7">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-bold text-xl text-acai"><span class="lang-es">Smoothie al Gusto</span><span class="lang-en">Build Your Own Smoothie</span></h3>
+              <span class="dots"></span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 4,50 €</span>
+            </div>
+            <p class="mt-2 text-sm text-cacaoL">
+              <span class="lang-es">Elige la fruta fresca de la vitrina y te lo batimos al momento, con agua, zumo o bebida vegetal.</span>
+              <span class="lang-en">Pick the fresh fruit from the display and we blend it to order, with water, juice or plant milk.</span>
+            </p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="size-pill"><b>M</b> 4,50 €</span><span class="size-pill"><b>L</b> 5,50 €</span>
+            </div>
+            <p class="mt-3 text-xs text-piedra">
+              <span class="lang-es">Añade toppings (coco, dátiles, almendra, chía, miel…) +0,90 € · Proteína +1,50 €</span>
+              <span class="lang-en">Add toppings (coconut, dates, almonds, chia, honey…) +€0.90 · Protein +€1.50</span>
+            </p>
           </article>
 
           <p class="text-center text-xs text-piedra pt-1">
@@ -621,18 +676,30 @@
           </p>
         </div>
 
-        <!-- ── Panel 3: Crepes & Gofres (de más barato a más caro) ── -->
+        <!-- ── Panel 3: Crepes (de más barato a más caro) ── -->
         <div role="tabpanel" id="panel-crepes" aria-labelledby="tab-crepes" data-panel="crepes" class="tab-panel space-y-7 hidden">
 
           <article class="menu-item">
             <div class="flex items-baseline">
-              <h3 class="font-display font-semibold text-lg"><span class="lang-es">Gofre Belga Clásico</span><span class="lang-en">Classic Belgian Waffle</span></h3>
+              <h3 class="font-display font-semibold text-lg"><span class="lang-es">Crepe Azúcar y Limón</span><span class="lang-en">Sugar &amp; Lemon Crepe</span></h3>
+              <span class="dots"></span>
+              <span class="font-display font-bold text-lg whitespace-nowrap">3,90 €</span>
+            </div>
+            <p class="mt-1.5 text-sm text-piedra">
+              <span class="lang-es">Mantequilla, azúcar y un toque de limón — el clásico de siempre</span>
+              <span class="lang-en">Butter, sugar and a twist of lemon — the timeless classic</span>
+            </p>
+          </article>
+
+          <article class="menu-item">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-lg"><span class="lang-es">Crepe Chocolate y Plátano</span><span class="lang-en">Chocolate &amp; Banana Crepe</span></h3>
               <span class="dots"></span>
               <span class="font-display font-bold text-lg whitespace-nowrap">4,50 €</span>
             </div>
             <p class="mt-1.5 text-sm text-piedra">
-              <span class="lang-es">Azúcar perlado, con sirope de arce o chocolate fundido</span>
-              <span class="lang-en">Pearl sugar, with maple syrup or melted chocolate</span>
+              <span class="lang-es">Sirope de chocolate y plátano fresco</span>
+              <span class="lang-en">Chocolate syrup and fresh banana</span>
             </p>
           </article>
 
@@ -650,9 +717,33 @@
 
           <article class="menu-item">
             <div class="flex items-baseline">
-              <h3 class="font-display font-semibold text-lg"><span class="lang-es">Crepe Salado Fit</span><span class="lang-en">Savoury Fit Crepe</span></h3>
+              <h3 class="font-display font-semibold text-lg"><span class="lang-es">Crepe Miel, Coco y Almendra</span><span class="lang-en">Honey, Coconut &amp; Almond Crepe</span></h3>
+              <span class="dots"></span>
+              <span class="font-display font-bold text-lg whitespace-nowrap">5,20 €</span>
+            </div>
+            <p class="mt-1.5 text-sm text-piedra">
+              <span class="lang-es">Miel de Málaga, coco rallado y almendra crujiente</span>
+              <span class="lang-en">Málaga honey, shredded coconut and crunchy almonds</span>
+            </p>
+          </article>
+
+          <article class="menu-item">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-lg"><span class="lang-es">Crepe Cacahuete Power</span><span class="lang-en">Peanut Power Crepe</span></h3>
               <span class="dots"></span>
               <span class="font-display font-bold text-lg whitespace-nowrap">5,50 €</span>
+            </div>
+            <p class="mt-1.5 text-sm text-piedra">
+              <span class="lang-es">Crema de cacahuete, plátano y nibs de cacao</span>
+              <span class="lang-en">Peanut butter, banana and cacao nibs</span>
+            </p>
+          </article>
+
+          <article class="menu-item">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-lg"><span class="lang-es">Crepe Salado Fit</span><span class="lang-en">Savoury Fit Crepe</span></h3>
+              <span class="dots"></span>
+              <span class="font-display font-bold text-lg whitespace-nowrap">5,90 €</span>
             </div>
             <p class="mt-1.5 text-sm text-piedra">
               <span class="lang-es">Pavo, aguacate, queso fresco y rúcula</span>
@@ -662,25 +753,26 @@
 
           <article class="menu-item">
             <div class="flex items-baseline">
-              <h3 class="font-display font-semibold text-lg"><span class="lang-es">Crepe Pistacho Oasis</span><span class="lang-en">Pistachio Oasis Crepe</span></h3>
-              <span class="dots"></span>
-              <span class="font-display font-bold text-lg whitespace-nowrap">5,90 €</span>
-            </div>
-            <p class="mt-1.5 text-sm text-piedra">
-              <span class="lang-es">Crema de pistacho, plátano y coco tostado</span>
-              <span class="lang-en">Pistachio cream, banana and toasted coconut</span>
-            </p>
-          </article>
-
-          <article class="menu-item">
-            <div class="flex items-baseline">
-              <h3 class="font-display font-semibold text-lg"><span class="lang-es">Gofre Açaí Crunch</span><span class="lang-en">Açaí Crunch Waffle</span></h3>
+              <h3 class="font-display font-semibold text-lg"><span class="lang-es">Crepe Açaí Crunch</span><span class="lang-en">Açaí Crunch Crepe</span></h3>
               <span class="dots"></span>
               <span class="font-display font-bold text-lg whitespace-nowrap">6,50 €</span>
             </div>
             <p class="mt-1.5 text-sm text-piedra">
-              <span class="lang-es">Base de gofre, açaí, fruta fresca y granola crujiente</span>
-              <span class="lang-en">Waffle base, açaí, fresh fruit and crunchy granola</span>
+              <span class="lang-es">Açaí, fruta fresca y granola crujiente</span>
+              <span class="lang-en">Açaí, fresh fruit and crunchy granola</span>
+            </p>
+          </article>
+
+          <!-- Crepe al gusto -->
+          <article class="border-2 border-dashed border-acai/40 bg-white/70 rounded-3xl p-6 sm:p-7">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-bold text-xl text-acai"><span class="lang-es">Crepe al Gusto</span><span class="lang-en">Build Your Own Crepe</span></h3>
+              <span class="dots"></span>
+              <span class="text-sm text-piedra font-medium whitespace-nowrap"><span class="lang-es">desde</span><span class="lang-en">from</span> 4,90 €</span>
+            </div>
+            <p class="mt-2 text-sm text-cacaoL">
+              <span class="lang-es">Elige hasta 3 ingredientes: fruta fresca de la vitrina, sirope de chocolate, miel, coco, almendra, dátiles, crema de cacahuete… Ingrediente extra +0,90 €.</span>
+              <span class="lang-en">Pick up to 3 ingredients: fresh fruit from the display, chocolate syrup, honey, coconut, almonds, dates, peanut butter… Extra ingredient +€0.90.</span>
             </p>
           </article>
         </div>
@@ -830,7 +922,7 @@
     <nav aria-label="Especialidades" class="max-w-6xl mx-auto px-4 sm:px-6 pb-7 mb-7 border-b border-crema/10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
       <a href="acai-bowls-fuengirola/" class="hover:text-crema transition-colors"><span class="lang-es">Açaí Bowls en Fuengirola</span><span class="lang-en">Açaí Bowls in Fuengirola</span></a>
       <a href="smoothies-zumos-fuengirola/" class="hover:text-crema transition-colors"><span class="lang-es">Smoothies y Zumos Naturales</span><span class="lang-en">Smoothies &amp; Fresh Juices</span></a>
-      <a href="crepes-gofres-fuengirola/" class="hover:text-crema transition-colors"><span class="lang-es">Crepes y Gofres Artesanales</span><span class="lang-en">Artisan Crepes &amp; Waffles</span></a>
+      <a href="crepes-gofres-fuengirola/" class="hover:text-crema transition-colors"><span class="lang-es">Crepes Artesanales</span><span class="lang-en">Artisan Crepes</span></a>
       <a href="en/" hreflang="en" class="hover:text-crema transition-colors">English</a>
     </nav>
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6 text-sm">

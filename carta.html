@@ -11,8 +11,8 @@
          escala con el ancho, se ve idéntica en ambas.
        · Bilingüe ES/EN: la traducción aparece debajo de cada
          línea (en un TV no hay interacción posible).
-       · Precios por tamaño: bowls S/M/L/XL · bebidas S/M/L.
-       · Ítems ordenados de más barato a más caro.
+       · Precios por tamaño: M y L.
+       · Ítems ordenados de más barato a más caro + opción al gusto.
        · Sin scroll, cursor oculto, auto-refresco cada 6 horas.
        · Modo kiosco recomendado: abrir en Chrome y pulsar F11.
        ============================================================ -->
@@ -59,11 +59,12 @@
     }
 
     /* ── Fila de producto: nombre + columnas de precios ──
-       4 tamaños (bowls) o 3 tamaños (bebidas), alineadas
-       con la fila de cabecera S · M · L · XL de cada columna. */
-    .row-4 { display: grid; grid-template-columns: 1fr repeat(4, 3.3rem); column-gap: .3rem; align-items: baseline; }
-    .row-3 { display: grid; grid-template-columns: 1fr repeat(3, 3.3rem); column-gap: .3rem; align-items: baseline; }
+       Dos tamaños (M y L), alineados con la fila de cabecera. */
+    .row-2 { display: grid; grid-template-columns: 1fr repeat(2, 3.6rem); column-gap: .3rem; align-items: baseline; }
     .price-cell { text-align: right; font-variant-numeric: tabular-nums; }
+
+    /* Tarjeta "al gusto" (borde discontinuo) */
+    .algusto { border: .14rem dashed rgba(74,21,75,.5); border-radius: 1.1rem; padding: 1vh 1vw; }
 
     /* ── Entrada escalonada de las columnas al encender ── */
     @keyframes colIn {
@@ -334,44 +335,53 @@
         </h2>
 
         <!-- Cabecera de tamaños -->
-        <div class="row-4 pt-[1vh] pb-[.4vh] font-display font-bold text-[.9rem] text-acai/80">
+        <div class="row-2 pt-[1vh] pb-[.4vh] font-display font-bold text-[.9rem] text-acai/80">
           <span class="text-[.75rem] font-medium text-piedra">€</span>
-          <span class="price-cell">S</span><span class="price-cell">M</span><span class="price-cell">L</span><span class="price-cell">XL</span>
+          <span class="price-cell">M</span><span class="price-cell">L</span>
         </div>
 
         <div class="flex-1 flex flex-col justify-evenly min-h-0">
 
           <article class="item-in" style="animation-delay:.55s">
-            <div class="row-4">
+            <div class="row-2">
+              <h3 class="font-display font-semibold text-[1.1rem]">Watermelon Chill</h3>
+              <span class="price-cell font-display font-bold text-[1rem]">5,50</span><span class="price-cell font-display font-bold text-[1rem]">6,50</span>
+            </div>
+            <p class="text-[.82rem] text-piedra leading-snug">Sandía congelada tipo sorbete, miel de Málaga y coco — de temporada</p>
+            <p class="text-[.76rem] text-piedra/75 italic leading-snug">Frozen watermelon sorbet-style, Málaga honey &amp; coconut — seasonal</p>
+          </article>
+
+          <article class="item-in" style="animation-delay:.7s">
+            <div class="row-2">
               <h3 class="font-display font-semibold text-[1.1rem]">Coco Zen</h3>
-              <span class="price-cell font-display font-bold text-[1rem]">5,50</span><span class="price-cell font-display font-bold text-[1rem]">6,90</span><span class="price-cell font-display font-bold text-[1rem]">8,20</span><span class="price-cell font-display font-bold text-[1rem]">9,50</span>
+              <span class="price-cell font-display font-bold text-[1rem]">5,90</span><span class="price-cell font-display font-bold text-[1rem]">6,90</span>
             </div>
             <p class="text-[.82rem] text-piedra leading-snug">Yogur de coco, frutos rojos, miel de Málaga y granola</p>
             <p class="text-[.76rem] text-piedra/75 italic leading-snug">Coconut yogurt, red berries, Málaga honey &amp; granola</p>
           </article>
 
-          <article class="item-in" style="animation-delay:.7s">
-            <div class="row-4">
+          <article class="item-in" style="animation-delay:.85s">
+            <div class="row-2">
               <h3 class="font-display font-semibold text-[1.1rem]">Tropical Escape</h3>
-              <span class="price-cell font-display font-bold text-[1rem]">5,90</span><span class="price-cell font-display font-bold text-[1rem]">7,20</span><span class="price-cell font-display font-bold text-[1rem]">8,50</span><span class="price-cell font-display font-bold text-[1rem]">9,90</span>
+              <span class="price-cell font-display font-bold text-[1rem]">6,20</span><span class="price-cell font-display font-bold text-[1rem]">7,20</span>
             </div>
             <p class="text-[.82rem] text-piedra leading-snug">Mango, piña, maracuyá, coco rallado y granola de miel</p>
             <p class="text-[.76rem] text-piedra/75 italic leading-snug">Mango, pineapple, passion fruit, coconut &amp; honey granola</p>
           </article>
 
-          <article class="item-in" style="animation-delay:.85s">
-            <div class="row-4">
+          <article class="item-in" style="animation-delay:1s">
+            <div class="row-2">
               <h3 class="font-display font-semibold text-[1.1rem]">Green Recovery</h3>
-              <span class="price-cell font-display font-bold text-[1rem]">6,20</span><span class="price-cell font-display font-bold text-[1rem]">7,50</span><span class="price-cell font-display font-bold text-[1rem]">8,80</span><span class="price-cell font-display font-bold text-[1rem]">10,20</span>
+              <span class="price-cell font-display font-bold text-[1rem]">6,50</span><span class="price-cell font-display font-bold text-[1rem]">7,50</span>
             </div>
             <p class="text-[.82rem] text-piedra leading-snug">Espinaca, plátano, espirulina, kiwi, almendra y granola</p>
             <p class="text-[.76rem] text-piedra/75 italic leading-snug">Spinach, banana, spirulina, kiwi, almonds &amp; granola</p>
           </article>
 
-          <article class="item-in" style="animation-delay:1s">
-            <div class="row-4">
+          <article class="item-in" style="animation-delay:1.15s">
+            <div class="row-2">
               <h3 class="font-display font-semibold text-[1.1rem]">Dragon Sunrise</h3>
-              <span class="price-cell font-display font-bold text-[1rem]">6,50</span><span class="price-cell font-display font-bold text-[1rem]">7,90</span><span class="price-cell font-display font-bold text-[1rem]">9,20</span><span class="price-cell font-display font-bold text-[1rem]">10,50</span>
+              <span class="price-cell font-display font-bold text-[1rem]">6,90</span><span class="price-cell font-display font-bold text-[1rem]">7,90</span>
             </div>
             <p class="text-[.82rem] text-piedra leading-snug">Pitaya, mango, kiwi, chía y granola crujiente</p>
             <p class="text-[.76rem] text-piedra/75 italic leading-snug">Dragon fruit, mango, kiwi, chia &amp; crunchy granola</p>
@@ -380,26 +390,32 @@
           <!-- Producto estrella con brillo animado -->
           <article class="shine relative overflow-hidden bg-gradient-to-br from-acai to-acaiL text-white rounded-[1.1rem] px-[1vw] py-[1.1vh] shadow-lg shadow-acai/20">
             <span class="badge-pulse inline-block bg-crema text-acai text-[.62rem] font-bold tracking-wide px-[.7vw] py-[.35vh] rounded-full mb-[.4vh]">TOP VENTAS · BEST SELLER</span>
-            <div class="row-4">
+            <div class="row-2">
               <h3 class="font-display font-bold text-[1.15rem]">Açaí Oasis Supreme</h3>
-              <span class="price-cell font-display font-bold text-[1rem]">6,90</span><span class="price-cell font-display font-bold text-[1rem]">8,20</span><span class="price-cell font-display font-bold text-[1rem]">9,50</span><span class="price-cell font-display font-bold text-[1rem]">10,90</span>
+              <span class="price-cell font-display font-bold text-[1rem]">7,20</span><span class="price-cell font-display font-bold text-[1rem]">8,20</span>
             </div>
             <p class="text-[.82rem] text-white/75 leading-snug">Açaí premium, granola, fresa, plátano, coco tostado y crema de cacahuete</p>
             <p class="text-[.76rem] text-white/55 italic leading-snug">Premium açaí, granola, strawberry, banana, toasted coconut &amp; peanut butter</p>
           </article>
 
-          <article class="item-in" style="animation-delay:1.15s">
-            <div class="row-4">
+          <article class="item-in" style="animation-delay:1.3s">
+            <div class="row-2">
               <h3 class="font-display font-semibold text-[1.1rem]">Protein Power</h3>
-              <span class="price-cell font-display font-bold text-[1rem]">7,50</span><span class="price-cell font-display font-bold text-[1rem]">8,90</span><span class="price-cell font-display font-bold text-[1rem]">10,20</span><span class="price-cell font-display font-bold text-[1rem]">11,50</span>
+              <span class="price-cell font-display font-bold text-[1rem]">7,50</span><span class="price-cell font-display font-bold text-[1rem]">8,90</span>
             </div>
             <p class="text-[.82rem] text-piedra leading-snug">Açaí, whey, plátano, nibs de cacao, crema de cacahuete y granola</p>
             <p class="text-[.76rem] text-piedra/75 italic leading-snug">Açaí, whey protein, banana, cacao nibs, peanut butter &amp; granola</p>
           </article>
 
-          <p class="item-in text-[.78rem] text-cacaoL bg-arena rounded-full px-[1vw] py-[.7vh] text-center font-medium" style="animation-delay:1.3s">
-            Topping extra <strong>+0,90 €</strong> · Proteína / Protein <strong>+1,50 €</strong>
-          </p>
+          <!-- Bowl al gusto -->
+          <article class="item-in algusto" style="animation-delay:1.45s">
+            <div class="row-2">
+              <h3 class="font-display font-bold text-[1.1rem] text-acai">Bowl al Gusto · Build Your Own</h3>
+              <span class="price-cell font-display font-bold text-[1rem]">6,90</span><span class="price-cell font-display font-bold text-[1rem]">7,90</span>
+            </div>
+            <p class="text-[.8rem] text-cacaoL leading-snug">Elige base, fruta fresca de la vitrina y 2 toppings · Pick base, display fruit &amp; 2 toppings</p>
+            <p class="text-[.74rem] text-piedra leading-snug">Toppings +0,90 €: sirope de chocolate · coco · almendra · dátiles · granola · miel · cacahuete · nibs · chía — Proteína +1,50 €</p>
+          </article>
         </div>
       </section>
 
@@ -411,53 +427,53 @@
         </h2>
 
         <!-- Cabecera de tamaños -->
-        <div class="row-3 pt-[1vh] pb-[.4vh] font-display font-bold text-[.9rem] text-cacaoL/80">
+        <div class="row-2 pt-[1vh] pb-[.4vh] font-display font-bold text-[.9rem] text-cacaoL/80">
           <span class="text-[.75rem] font-medium text-piedra">€</span>
-          <span class="price-cell">S</span><span class="price-cell">M</span><span class="price-cell">L</span>
+          <span class="price-cell">M</span><span class="price-cell">L</span>
         </div>
 
         <div class="flex-1 flex flex-col justify-evenly min-h-0">
 
           <article class="item-in" style="animation-delay:.75s">
-            <div class="row-3">
+            <div class="row-2">
               <h3 class="font-display font-semibold text-[1.1rem]">Zumo de Naranja Natural</h3>
-              <span class="price-cell font-display font-bold text-[1rem]">2,90</span><span class="price-cell font-display font-bold text-[1rem]">3,90</span><span class="price-cell font-display font-bold text-[1rem]">4,90</span>
+              <span class="price-cell font-display font-bold text-[1rem]">3,50</span><span class="price-cell font-display font-bold text-[1rem]">4,50</span>
             </div>
             <p class="text-[.82rem] text-piedra leading-snug">100% naranja, exprimido al momento</p>
             <p class="text-[.76rem] text-piedra/75 italic leading-snug">Fresh orange juice — 100% squeezed to order</p>
           </article>
 
           <article class="item-in" style="animation-delay:.9s">
-            <div class="row-3">
+            <div class="row-2">
               <h3 class="font-display font-semibold text-[1.1rem]">Detox Antiox</h3>
-              <span class="price-cell font-display font-bold text-[1rem]">3,50</span><span class="price-cell font-display font-bold text-[1rem]">4,50</span><span class="price-cell font-display font-bold text-[1rem]">5,50</span>
+              <span class="price-cell font-display font-bold text-[1rem]">3,90</span><span class="price-cell font-display font-bold text-[1rem]">4,90</span>
             </div>
             <p class="text-[.82rem] text-piedra leading-snug">Remolacha, zanahoria, manzana y jengibre — prensado en frío</p>
             <p class="text-[.76rem] text-piedra/75 italic leading-snug">Beetroot, carrot, apple &amp; ginger — cold-pressed</p>
           </article>
 
           <article class="item-in" style="animation-delay:1.05s">
-            <div class="row-3">
+            <div class="row-2">
               <h3 class="font-display font-semibold text-[1.1rem]">Berry Boost</h3>
-              <span class="price-cell font-display font-bold text-[1rem]">3,90</span><span class="price-cell font-display font-bold text-[1rem]">4,90</span><span class="price-cell font-display font-bold text-[1rem]">5,90</span>
+              <span class="price-cell font-display font-bold text-[1rem]">4,20</span><span class="price-cell font-display font-bold text-[1rem]">5,20</span>
             </div>
             <p class="text-[.82rem] text-piedra leading-snug">Frutos rojos, plátano y bebida de almendras</p>
             <p class="text-[.76rem] text-piedra/75 italic leading-snug">Red berries, banana &amp; almond milk</p>
           </article>
 
           <article class="item-in" style="animation-delay:1.2s">
-            <div class="row-3">
+            <div class="row-2">
               <h3 class="font-display font-semibold text-[1.1rem]">Sunset Fuengirola</h3>
-              <span class="price-cell font-display font-bold text-[1rem]">4,20</span><span class="price-cell font-display font-bold text-[1rem]">5,20</span><span class="price-cell font-display font-bold text-[1rem]">6,20</span>
+              <span class="price-cell font-display font-bold text-[1rem]">4,50</span><span class="price-cell font-display font-bold text-[1rem]">5,50</span>
             </div>
             <p class="text-[.82rem] text-piedra leading-snug">Mango, fresa, naranja y plátano</p>
             <p class="text-[.76rem] text-piedra/75 italic leading-snug">Mango, strawberry, orange &amp; banana</p>
           </article>
 
           <article class="item-in" style="animation-delay:1.35s">
-            <div class="row-3">
+            <div class="row-2">
               <h3 class="font-display font-semibold text-[1.1rem]">Verde Vital</h3>
-              <span class="price-cell font-display font-bold text-[1rem]">4,50</span><span class="price-cell font-display font-bold text-[1rem]">5,50</span><span class="price-cell font-display font-bold text-[1rem]">6,50</span>
+              <span class="price-cell font-display font-bold text-[1rem]">4,70</span><span class="price-cell font-display font-bold text-[1rem]">5,70</span>
             </div>
             <p class="text-[.82rem] text-piedra leading-snug">Espinaca, manzana verde, apio, jengibre y limón</p>
             <p class="text-[.76rem] text-piedra/75 italic leading-snug">Spinach, green apple, celery, ginger &amp; lemon</p>
@@ -466,49 +482,65 @@
           <!-- El clásico de la casa con brillo animado -->
           <article class="shine item-in relative overflow-hidden bg-gradient-to-br from-cacao to-cacaoL text-white rounded-[1.1rem] px-[1vw] py-[1.1vh] shadow-lg shadow-cacao/25" style="animation-delay:1.5s">
             <span class="badge-pulse inline-block bg-crema text-cacao text-[.62rem] font-bold tracking-wide px-[.7vw] py-[.35vh] rounded-full mb-[.4vh]">EL CLÁSICO · HOUSE CLASSIC</span>
-            <div class="row-3">
+            <div class="row-2">
               <h3 class="font-display font-bold text-[1.15rem]">Batido Oasis</h3>
-              <span class="price-cell font-display font-bold text-[1rem]">4,70</span><span class="price-cell font-display font-bold text-[1rem]">5,70</span><span class="price-cell font-display font-bold text-[1rem]">6,70</span>
+              <span class="price-cell font-display font-bold text-[1rem]">4,90</span><span class="price-cell font-display font-bold text-[1rem]">5,90</span>
             </div>
             <p class="text-[.82rem] text-white/75 leading-snug">Aguacate, dátiles y almendra — el que enamoraba a todos</p>
             <p class="text-[.76rem] text-white/55 italic leading-snug">Avocado, dates &amp; almond — the one everyone fell in love with</p>
           </article>
 
           <article class="item-in" style="animation-delay:1.65s">
-            <div class="row-3">
+            <div class="row-2">
               <h3 class="font-display font-semibold text-[1.1rem]">Protein Shake Oasis</h3>
-              <span class="price-cell font-display font-bold text-[1rem]">4,90</span><span class="price-cell font-display font-bold text-[1rem]">5,90</span><span class="price-cell font-display font-bold text-[1rem]">6,90</span>
+              <span class="price-cell font-display font-bold text-[1rem]">5,20</span><span class="price-cell font-display font-bold text-[1rem]">6,20</span>
             </div>
             <p class="text-[.82rem] text-piedra leading-snug">Whey, plátano, avena, cacao y bebida vegetal a elegir</p>
             <p class="text-[.76rem] text-piedra/75 italic leading-snug">Whey, banana, oats, cacao &amp; your choice of plant milk</p>
           </article>
 
-          <p class="item-in text-[.78rem] text-cacaoL bg-arena rounded-full px-[1vw] py-[.7vh] text-center font-medium" style="animation-delay:1.8s">
-            Sin azúcares añadidos · No added sugars
-          </p>
+          <!-- Smoothie al gusto -->
+          <article class="item-in algusto" style="animation-delay:1.8s">
+            <div class="row-2">
+              <h3 class="font-display font-bold text-[1.1rem] text-acai">Smoothie al Gusto · Your Choice</h3>
+              <span class="price-cell font-display font-bold text-[1rem]">4,50</span><span class="price-cell font-display font-bold text-[1rem]">5,50</span>
+            </div>
+            <p class="text-[.8rem] text-cacaoL leading-snug">Fruta fresca de la vitrina, batida al momento · Fresh fruit from the display, blended to order</p>
+            <p class="text-[.74rem] text-piedra leading-snug">Sin azúcares añadidos · No added sugars — Toppings +0,90 € · Proteína +1,50 €</p>
+          </article>
         </div>
       </section>
 
       <!-- ─── COLUMNA 3 · CREPES & GOFRES ─── -->
-      <section class="col-in col-in-3 flex flex-col min-h-0" aria-label="Crepes y Gofres">
+      <section class="col-in col-in-3 flex flex-col min-h-0" aria-label="Crepes">
         <h2 class="flex items-center gap-[.6vw] font-display font-bold text-[1.4rem] text-cacao border-b-[.2rem] border-cacao/50 pb-[1vh] mb-[1.4vh]">
-          <svg class="w-[1.6rem] h-[1.6rem]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3.5"/><path d="M9.3 4v16M14.7 4v16M4 9.3h16M4 14.7h16"/></svg>
-          <span>Crepes &amp; Gofres <span class="text-[.85rem] font-medium text-piedra">· Waffles</span></span>
+          <svg class="w-[1.6rem] h-[1.6rem]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20A16 16 0 0 1 20 4v16H4z"/><path d="M12.5 20a7.5 7.5 0 0 1 7.5-7.5"/></svg>
+          Crepes
         </h2>
 
         <div class="flex-1 flex flex-col justify-evenly min-h-0">
 
           <article class="item-in" style="animation-delay:.95s">
             <div class="flex items-baseline">
-              <h3 class="font-display font-semibold text-[1.1rem]">Gofre Belga Clásico</h3>
+              <h3 class="font-display font-semibold text-[1.1rem]">Crepe Azúcar y Limón</h3>
+              <span class="dots"></span>
+              <span class="font-display font-bold text-[1.1rem] whitespace-nowrap">3,90 €</span>
+            </div>
+            <p class="text-[.82rem] text-piedra leading-snug">Mantequilla, azúcar y un toque de limón</p>
+            <p class="text-[.76rem] text-piedra/75 italic leading-snug">Sugar &amp; lemon crepe — the timeless classic</p>
+          </article>
+
+          <article class="item-in" style="animation-delay:1.07s">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-[1.1rem]">Crepe Chocolate y Plátano</h3>
               <span class="dots"></span>
               <span class="font-display font-bold text-[1.1rem] whitespace-nowrap">4,50 €</span>
             </div>
-            <p class="text-[.82rem] text-piedra leading-snug">Azúcar perlado, sirope de arce o chocolate fundido</p>
-            <p class="text-[.76rem] text-piedra/75 italic leading-snug">Classic Belgian waffle — pearl sugar, maple syrup or melted chocolate</p>
+            <p class="text-[.82rem] text-piedra leading-snug">Sirope de chocolate y plátano fresco</p>
+            <p class="text-[.76rem] text-piedra/75 italic leading-snug">Chocolate syrup &amp; fresh banana</p>
           </article>
 
-          <article class="item-in" style="animation-delay:1.1s">
+          <article class="item-in" style="animation-delay:1.19s">
             <div class="flex items-baseline">
               <h3 class="font-display font-semibold text-[1.1rem]">Crepe Nutella &amp; Fresa</h3>
               <span class="dots"></span>
@@ -518,44 +550,56 @@
             <p class="text-[.76rem] text-piedra/75 italic leading-snug">Nutella &amp; strawberry crepe — the irresistible classic</p>
           </article>
 
-          <article class="item-in" style="animation-delay:1.25s">
+          <article class="item-in" style="animation-delay:1.31s">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-[1.1rem]">Crepe Miel, Coco y Almendra</h3>
+              <span class="dots"></span>
+              <span class="font-display font-bold text-[1.1rem] whitespace-nowrap">5,20 €</span>
+            </div>
+            <p class="text-[.82rem] text-piedra leading-snug">Miel de Málaga, coco rallado y almendra crujiente</p>
+            <p class="text-[.76rem] text-piedra/75 italic leading-snug">Málaga honey, shredded coconut &amp; crunchy almonds</p>
+          </article>
+
+          <article class="item-in" style="animation-delay:1.43s">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-semibold text-[1.1rem]">Crepe Cacahuete Power</h3>
+              <span class="dots"></span>
+              <span class="font-display font-bold text-[1.1rem] whitespace-nowrap">5,50 €</span>
+            </div>
+            <p class="text-[.82rem] text-piedra leading-snug">Crema de cacahuete, plátano y nibs de cacao</p>
+            <p class="text-[.76rem] text-piedra/75 italic leading-snug">Peanut butter, banana &amp; cacao nibs</p>
+          </article>
+
+          <article class="item-in" style="animation-delay:1.55s">
             <div class="flex items-baseline">
               <h3 class="font-display font-semibold text-[1.1rem]">Crepe Salado Fit</h3>
               <span class="dots"></span>
-              <span class="font-display font-bold text-[1.1rem] whitespace-nowrap">5,50 €</span>
+              <span class="font-display font-bold text-[1.1rem] whitespace-nowrap">5,90 €</span>
             </div>
             <p class="text-[.82rem] text-piedra leading-snug">Pavo, aguacate, queso fresco y rúcula</p>
             <p class="text-[.76rem] text-piedra/75 italic leading-snug">Savoury fit crepe — turkey, avocado, fresh cheese &amp; arugula</p>
           </article>
 
-          <article class="item-in" style="animation-delay:1.4s">
+          <article class="item-in" style="animation-delay:1.67s">
             <div class="flex items-baseline">
-              <h3 class="font-display font-semibold text-[1.1rem]">Crepe Pistacho Oasis</h3>
-              <span class="dots"></span>
-              <span class="font-display font-bold text-[1.1rem] whitespace-nowrap">5,90 €</span>
-            </div>
-            <p class="text-[.82rem] text-piedra leading-snug">Crema de pistacho, plátano y coco tostado</p>
-            <p class="text-[.76rem] text-piedra/75 italic leading-snug">Pistachio cream, banana &amp; toasted coconut</p>
-          </article>
-
-          <article class="item-in" style="animation-delay:1.55s">
-            <div class="flex items-baseline">
-              <h3 class="font-display font-semibold text-[1.1rem]">Gofre Açaí Crunch</h3>
+              <h3 class="font-display font-semibold text-[1.1rem]">Crepe Açaí Crunch</h3>
               <span class="dots"></span>
               <span class="font-display font-bold text-[1.1rem] whitespace-nowrap">6,50 €</span>
             </div>
-            <p class="text-[.82rem] text-piedra leading-snug">Base de gofre, açaí, fruta fresca y granola crujiente</p>
-            <p class="text-[.76rem] text-piedra/75 italic leading-snug">Açaí crunch waffle — fresh fruit &amp; crunchy granola</p>
+            <p class="text-[.82rem] text-piedra leading-snug">Açaí, fruta fresca y granola crujiente</p>
+            <p class="text-[.76rem] text-piedra/75 italic leading-snug">Açaí, fresh fruit &amp; crunchy granola</p>
           </article>
 
-          <!-- Recordatorio de pedido para llevar -->
-          <div class="item-in bg-cacao text-crema rounded-[1.1rem] px-[1.1vw] py-[1.3vh] text-center" style="animation-delay:1.7s">
-            <p class="flex items-center justify-center gap-[.5vw] font-display font-bold text-[1rem]">
-              <svg class="w-[1.2rem] h-[1.2rem]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 3.5H9l1.8 4.7-2.3 1.5a12.5 12.5 0 0 0 5.8 5.8l1.5-2.3 4.7 1.8v3.5a2 2 0 0 1-2.2 2A17 17 0 0 1 3.5 5.7a2 2 0 0 1 2-2.2z"/></svg>
-              Pide y recoge · Order &amp; pick up
-            </p>
-            <p class="text-[.85rem] text-arena/70 mt-[.3vh]">WhatsApp · +34 602 38 29 12</p>
-          </div>
+          <!-- Crepe al gusto -->
+          <article class="item-in algusto" style="animation-delay:1.79s">
+            <div class="flex items-baseline">
+              <h3 class="font-display font-bold text-[1.1rem] text-acai">Crepe al Gusto · Build Your Own</h3>
+              <span class="dots"></span>
+              <span class="font-display font-bold text-[1.1rem] whitespace-nowrap">4,90 €</span>
+            </div>
+            <p class="text-[.8rem] text-cacaoL leading-snug">Hasta 3 ingredientes a elegir · Pick up to 3 ingredients — extra +0,90 €</p>
+            <p class="text-[.74rem] text-piedra leading-snug">Fruta de la vitrina · sirope de chocolate · miel · coco · almendra · dátiles · cacahuete · nibs</p>
+          </article>
         </div>
       </section>
     </main>
